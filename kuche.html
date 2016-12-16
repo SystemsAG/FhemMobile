@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>KÜCHE</title>
+</head>
+<body>
+
+<div class="gridster">
+<ul>
+<li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">HOME</header>
+	<div data-type="pagetab"
+		 data-device="st_alert"
+		 data-get-on='["off","[1-9]{1}|[0-9]{2}"]'
+		 data-url="index_home.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-home"
+		 data-icons='["fa-home","fa-home warn"]'
+		 class="big cell">
+	</div>
+</li>
+
+<li class="halbTransparent" data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">MENÜ</header>
+	<div data-type="pagetab"
+		 data-url="menu.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-bars"
+		 class="big cell">
+	</div>
+</li>
+
+<li class="halbTransparent border-left border-right" data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">DWD</header>
+	<div data-type="pagetab"
+		 data-device="gds"
+		 data-get="a_count"
+		 data-get-on='["no","^[1-9][0-9]|[1-9]$"]'
+		 data-url="dwd.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-bolt"
+		 data-icons='["fa-bolt","fa-bolt warn"]'
+		 class="big cell">
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">WETTER</header>
+	<div data-type="pagetab"
+		 data-url="wetter.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-cloud"
+		 class="big cell">
+	</div>
+</li>
+
+<li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">TEMP / HUM</header>
+	<div class="top-space-mobile">
+		<div data-type="label"
+			 data-device="ku_WT"
+			 data-get="temperature"
+			 data-unit="%B0C%0A"
+			 data-limits='[-70,20,25]'
+			 data-colors='["cornflowerblue","green","firebrick"]'
+			 class="big inline">
+		</div>
+		<div data-type="label"
+			 data-device=""
+			 data-get=""
+			 data-unit="%"
+			 data-limits='[0,40,61]'
+			 data-colors='["cornflowerblue","green","firebrick"]'
+			 class="big inline">XX%
+		</div>
+		<hr width="85%" class="">
+		<div class="big narrow orange">Küche
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-left" data-row="2" data-col="3" data-sizex="2" data-sizey="1">
+</li>
+
+<li class="halbTransparent border-left border-right" data-row="3" data-col="1" data-sizex="4" data-sizey="1">
+	<header class="headerTransparent">HEIZUNG</header>
+	<div class="top-space-mobile">
+		<div class="inline">
+			<div data-type="symbol"
+				 data-device="ku_SC"
+				 data-get-on="opened.*"
+				 data-get-off="closed.*"
+				 data-on-color="firebrick"
+				 data-off-color="#3D4C66"
+				 class="">
+			</div>
+			<div class="narrow">&nbsp;
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="ku_WT"
+				 data-get="desiredTemperature"
+				 data-get-on="15.0"
+				 data-get-off="^(?!15.0).*$"
+				 data-set="desiredTemperature"
+				 data-set-on="eco"
+				 data-set-off=""
+				 data-icon="ma-brightness_3"
+				 data-background-icon="fa-circle-thin"
+				 data-on-color="cornflowerblue"
+				 data-off-color="#808080"
+				 data-on-background-color="#aa6900"
+				 data-off-background-color="#3D4C66"
+				 class="">
+			</div>
+			<div class="narrow">15°C
+			</div>
+		</div>
+		<div class="inline">
+            <div data-type="spinner"
+                 data-device="ku_WT"
+				 data-get="desiredTemperature"
+				 data-set="desiredTemperature"
+                 data-icon-left-color="blue"
+                 data-icon-right-color="red"
+                 data-min="4.5"
+                 data-max="25.0"
+				 data-step="0.5"
+				 data-width="130"
+				 data-height="47"
+				 data-unit="°"
+				 data-longdelay="2500"
+				 data-background-color="none"
+                 class="valueonly">
+            </div>
+			<div class="narrow">Temperatur
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="ku_WT"
+				 data-get="desiredTemperature"
+				 data-get-on="22.0"
+				 data-get-off="^(?!22.0).*$"
+				 data-set="desiredTemperature"
+				 data-set-on="comfort"
+				 data-set-off=""
+				 data-icon="ro-sun"
+				 data-background-icon="fa-circle-thin"
+				 data-on-color="green"
+				 data-off-color="#808080"
+				 data-on-background-color="#aa6900"
+				 data-off-background-color="#3D4C66"
+				 class="">
+			</div>
+			<div class="narrow">22°C
+			</div>
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="5" data-col="1" data-sizex="3" data-sizey="1">
+</li>
+
+<li class="halbTransparent border-right" data-row="5" data-col="4" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">LAUTSPR.</header>
+	<div data-type="switch"
+		 data-device="IT_00F0FFFF10"
+		 data-on-color="black"
+		 data-off-color="#808080"
+		 data-on-background-color="cornflowerblue"
+		 data-off-background-color="#3D4C66"
+		 data-icon="ma-speaker"
+		 class="cell">
+	</div>
+</li>
+
+<li class="halbTransparent border-left border-right" data-row="6" data-col="1" data-sizex="4" data-sizey="1">
+	<header class="headerTransparent">INTERNET-RADIO</header>
+	<div class="top-space-mobile">
+		<div class="inline">
+			<div data-type="popup"
+				 data-height="560px"
+				 data-width="150px"
+				 class="">
+				<div data-type="push"
+					 data-off-color="#808080"
+					 data-off-background-color="#3D4C66"
+					 data-icon="ma-queue_music"
+					 class="">
+				</div>
+				<div class="">Sender
+				</div>
+				<div class="dialog dialogTransparent">
+					<header class="dialogheaderTransparent">RADIO - KÜCHE - SENDER</header>
+					<div class="top-space">
+						<div class="">
+							<div onclick="$('.dialog-close').trigger('click');"
+								 data-type="image"
+								 data-url="./images/radio21.png"
+								 data-size="64"
+								 data-opacity="1"
+								 data-fhem-cmd="setreading ku_intentradio_dummy now_playing_img ./images/radio21.png; setreading ku_intentradio_dummy now_playing_url http://188.94.97.91/radio21.mp3; setreading ku_intentradio_dummy now_playing_name Radio21; set ku_intentradio_dummy setPLAY"
+								 class="">
+							</div>
+							<div data-type="label"
+								 class="">&nbsp;
+							</div>
+						</div>
+						<div class="">
+							<div onclick="$('.dialog-close').trigger('click');"
+								 data-type="image"
+								 data-url="./images/ffn.png"
+								 data-size="64"
+								 data-opacity="1"
+								 data-fhem-cmd="setreading ku_intentradio_dummy now_playing_img ./images/ffn.png; setreading ku_intentradio_dummy now_playing_url http://player.ffn.de/ffnstream.mp3; setreading ku_intentradio_dummy now_playing_name FFN; set ku_intentradio_dummy setPLAY"
+								 class="">
+							</div>
+							<div data-type="label"
+								 class="">&nbsp;
+							</div>
+						</div>
+						<div class="">
+							<div onclick="$('.dialog-close').trigger('click');"
+								 data-type="image"
+								 data-url="./images/rautemusikmain.png"
+								 data-size="64"
+								 data-opacity="1"
+								 data-fhem-cmd="setreading ku_intentradio_dummy now_playing_img ./images/rautemusikmain.png; setreading ku_intentradio_dummy now_playing_url http://main-high.rautemusik.fm/listen.pls; setreading ku_intentradio_dummy now_playing_name RauteMusik-Main; set ku_intentradio_dummy setPLAY"
+								 class="">
+							</div>
+							<div data-type="label"
+								 class="">&nbsp;
+							</div>
+						</div>
+						<div class="">
+							<div onclick="$('.dialog-close').trigger('click');"
+								 data-type="image"
+								 data-url="./images/rautemusikhouse.png"
+								 data-size="64"
+								 data-opacity="1"
+								 data-fhem-cmd="setreading ku_intentradio_dummy now_playing_img ./images/rautemusikhouse.png; setreading ku_intentradio_dummy now_playing_url http://house-high.rautemusik.fm/listen.pls; setreading ku_intentradio_dummy now_playing_name RauteMusik-House; set ku_intentradio_dummy setPLAY"
+								 class="">
+							</div>
+							<div data-type="label"
+								 class="">&nbsp;
+							</div>
+						</div>
+						<div class="">
+							<div onclick="$('.dialog-close').trigger('click');"
+								 data-type="image"
+								 data-url="./images/rautemusikclub.png"
+								 data-size="64"
+								 data-opacity="1"
+								 data-fhem-cmd="setreading ku_intentradio_dummy now_playing_img ./images/rautemusikclub.png; setreading ku_intentradio_dummy now_playing_url http://club-high.rautemusik.fm/listen.pls; setreading ku_intentradio_dummy now_playing_name RauteMusik-Club; set ku_intentradio_dummy setPLAY"
+								 class="">
+							</div>
+							<div data-type="label"
+								 class="">&nbsp;
+							</div>
+						</div>
+						<div class="">
+							<div onclick="$('.dialog-close').trigger('click');"
+								 data-type="image"
+								 data-url="./images/rautemusikharder.png"
+								 data-size="64"
+								 data-opacity="1"
+								 data-fhem-cmd="setreading ku_intentradio_dummy now_playing_img ./images/rautemusikharder.png; setreading ku_intentradio_dummy now_playing_url http://harder-high.rautemusik.fm/listen.pls; setreading ku_intentradio_dummy now_playing_name RauteMusik-Harder; set ku_intentradio_dummy setPLAY"
+								 class="">
+							</div>
+							<div data-type="label"
+								 class="">&nbsp;
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inline left-space">
+			<div data-type="switch"
+				 data-device="ku_intentradio_dummy"
+				 data-set-states='["setPLAY","setSTOP"]'
+				 data-states='["stop|play/pause|play/buffering|play/duck|play/disconnected|complete|error|setPLAY|setSTOP","play"]'
+				 data-icons='["fa-play","fa-stop"]'
+				 data-colors='["#808080","#808080"]'
+				 data-background-icons='["fa-circle-thin","fa-circle-thin"]'
+				 data-background-colors='["#3D4C66","#3D4C66"]'
+				 class="">
+			</div>
+			<div class="">Play/Stop
+			</div>
+		</div>
+		<div class="inline left-space">
+			<div data-type="symbol"
+				 data-device="ku_intentradio_dummy"
+				 data-states='["play","stop","play/pause","play/buffering","play/duck","play/disconnected","complete","error","setPLAY","setSTOP"]'
+				 data-icons='["fa-play","fa-stop","fa-pause","fa-play fa-blink","fa-play fa-blink","ma-signal_wifi_off","fa-stop","fa-exclamation-triangle","fa-play blink","fa-stop blink"]'
+				 data-colors='["green","#808080","#aa6900","#aa6900","#aa6900","firebrick","#808080","firebrick","green","#808080"]'
+				 class="">
+			</div>
+			<div class="">Status
+			</div>
+		</div>
+		<div class="inline left-space-2">
+			<div data-type="popup"
+				 data-width="125"
+				 data-height="250"
+				 data-draggable="false"
+				 class="">
+				<div data-type="image"
+					 data-device="ku_intentradio_dummy"
+					 data-get="now_playing_img"
+					 data-size="44"
+					 class="">
+				 </div>
+				 <div class="dialog dialogTransparent">
+					<header class="dialogheaderTransparent">KÜCHE - LAUTSTÄRKE</header>
+					<div class="top-space left-space">
+						<div data-type="slider"
+							 data-device="ku_S3_amad"
+							 data-get="volume"
+							 data-set="volume"
+							 data-min="0"
+							 data-max="15"
+							 data-on="15"
+							 data-off="0"
+							 data-height="150"
+							 data-color="cornflowerblue"
+							 data-background-color="#3D4C66"
+							 class="tap">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="narrow">&nbsp;
+			</div>
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-left border-right" data-row="6" data-col="1" data-sizex="4" data-sizey="1">
+    <header class="headerTransparent">BATTERIEN</header>
+	<div class="">
+		<div class="inline">
+			<div data-type="symbol"
+				 data-device="ku_WT"
+				 data-get="battery"
+				 data-states='["ok","low"]'
+				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+				 data-colors='["green","firebrick"]'
+				 class="">
+			</div>
+			<div class="narrow">Therm.
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="symbol"
+				 data-device="ku_HT"
+				 data-get="battery"
+				 data-states='["ok","low"]'
+				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+				 data-colors='["green","firebrick"]'
+				 class="">
+			</div>
+			<div class="narrow">Heizung
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="symbol"
+				 data-device="ku_SC"
+				 data-get="battery"
+				 data-states='["ok","low"]'
+				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+				 data-colors='["green","firebrick"]'
+				 class="">
+			</div>
+			<div class="narrow">Fenster
+			</div>
+		</div>
+	</div>
+</li>
+
+</ul>
+</div>
+</body>
+</html>
