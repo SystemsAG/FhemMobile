@@ -67,23 +67,23 @@
 </li>
 
 <li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1">
-	<header class="headerTransparent">TEMP / HUM</header>
+	<header class="headerTransparent">TEMP / LICHT</header>
 	<div class="top-space-mobile">
 		<div data-type="label"
-			 data-device="wz_WT"
+			 data-device="wz_Sensor"
 			 data-get="temperature"
-			 data-unit="%B0C%0A"
-			 data-limits='[-70,20,25]'
+			 
+			 data-limits='[-70,25,25]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<div data-type="label"
-			 data-device=""
-			 data-get=""
-			 data-unit="%"
+			 data-device="wz_Sensor"
+			 data-get="luminance"
+			 
 			 data-limits='[0,40,61]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
-			 class="big inline">XX%
+			 class="big inline">
 		</div>
 		<hr width="85%" class="">
 		<div class="big narrow orange">Wohnzimmer
@@ -193,24 +193,11 @@
 	</div>
 </li>
 
-<li class="halbTransparent border-left border-right" data-row="4" data-col="1" data-sizex="1" data-sizey="1">
-	<header class="headerTransparent">VSX-510</header>
+<li class="halbTransparent" data-row="4" data-col="1" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">SAMSUNG TV</header>
 	<div data-type="switch"
-		 data-device="vsx_510"
-		 data-get="power"
-		 data-on-color="black"
-		 data-off-color="#808080"
-		 data-on-background-color="cornflowerblue"
-		 data-off-background-color="#3D4C66"
-		 data-icon="fa-power-off"
-		 class="cell">
-	</div>
-</li>
-
-<li class="halbTransparent" data-row="4" data-col="2" data-sizex="1" data-sizey="1">
-	<header class="headerTransparent">LG TV</header>
-	<div data-type="switch"
-		 data-device="wz_lgtv"
+		 data-device="SamsungTv"
+		 data-set-off="POWEROFF"
 		 data-on-color="black"
 		 data-off-color="#808080"
 		 data-on-background-color="cornflowerblue"
@@ -220,18 +207,43 @@
 	</div>
 </li>
 
-<li class="halbTransparent border-left border-right" data-row="4" data-col="3" data-sizex="1" data-sizey="1">
-	<header class="headerTransparent">SUBWOOFER</header>
-	<div data-type="switch"
-		 data-device="wz_subwoofer"
-		 data-on-color="black"
-		 data-off-color="#808080"
-		 data-on-background-color="cornflowerblue"
-		 data-off-background-color="#3D4C66"
-		 data-icon="ma-speaker"
-		 class="cell">
-	</div>
+<li class="halbTransparent" data-row="5" data-col="1" data-sizex="2" data-sizey="1">
+<header class="headerTransparent">VOL</header>
+
+    <div class="doublebox-h normal centered">
+        <div data-type="push" 
+        		 data-device="SamsungTv" 
+             data-icon="fa-angle-up" 
+             data-background-icon="fa-square-o" 
+             data-set-on="VOLUP">
+        </div>
+        <div data-type="push" 
+        		 data-device="SamsungTv" 
+             data-icon="fa-angle-down" 
+             data-background-icon="fa-square-o" 
+             data-set-on="VOLDOWN">
+        </div>
+    </div>
+
 </li>
+
+<li class="halbTransparent border-left border-right" data-row="4" data-col="3" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">KANÄLE</header>
+	<div>
+    <div class="doublebox-v inline small">
+        <div data-type="push" data-device="SamsungTv"
+             data-icon="fa-chevron-up" data-background-icon="fa-square-o"
+             data-set-on="CHUP">
+        </div>
+        <div data-type="push" data-device="SamsungTv"
+                data-icon="fa-chevron-down" data-background-icon="fa-square-o"
+                data-set-on="CHDOWN">
+        </div>
+    </div>
+   
+</div>
+</li>
+
 
 <li class="halbTransparent border-right" data-row="4" data-col="4" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">LADEGERÄT</header>
@@ -261,15 +273,15 @@
 				 data-colors='["green","firebrick"]'
 				 class="">
 			</div>
-			<div class="narrow">Therm.
+			<div class="narrow">Sensor.
 			</div>
 		</div>
 		<div class="inline">
 			<div data-type="symbol"
-				 data-device="wz_HT"
+				 data-device="wz_Heizung"
 				 data-get="battery"
-				 data-states='["ok","low"]'
-				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+				 data-states='["75 %","$wert < 80"]'
+				 data-icons='["fa-battery-half","fa-battery-full fa-blink"]'
 				 data-colors='["green","firebrick"]'
 				 class="">
 			</div>
@@ -277,11 +289,11 @@
 			</div>
 		</div>
 		<div class="inline">
-			<div data-type="symbol"
-				 data-device="wz_SC"
+			<div data-type="readingsGroup"
+				 data-device="wz_Heizung"
 				 data-get="battery"
-				 data-states='["ok","low"]'
-				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+				 data-states='["ok","75%"]'
+				 data-icons='["fa-battery-full fa-blink","fa-battery-half fa-blink"]'
 				 data-colors='["green","firebrick"]'
 				 class="">
 			</div>

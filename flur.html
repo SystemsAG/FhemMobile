@@ -67,23 +67,23 @@
 </li>
 
 <li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1">
-	<header class="headerTransparent">TEMP / HUM</header>
+	<header class="headerTransparent">TEMP / LICHT</header>
 	<div class="top-space-mobile">
 		<div data-type="label"
-			 data-device="BMP180"
+			 data-device="wz_Sensor"
 			 data-get="temperature"
-			 data-unit="%B0C%0A"
-			 data-limits='[-70,20,25]'
+			 
+			 data-limits='[-70,25,25]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<div data-type="label"
-			 data-device=""
-			 data-get=""
-			 data-unit="%"
+			 data-device="wz_Sensor"
+			 data-get="luminance"
+			 
 			 data-limits='[0,40,61]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
-			 class="big inline">XX%
+			 class="big inline">
 		</div>
 		<hr width="85%" class="">
 		<div class="big narrow orange">Flur
@@ -185,7 +185,7 @@
 <li class="halbTransparent border-left border-right" data-row="4" data-col="1" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">DECKENLA.</header>
 	<div data-type="switch"
-		 data-device="fl_aktor_deckenlampe"
+		 data-device="fl_Licht"
 		 data-on-color="black"
 		 data-off-color="#808080"
 		 data-on-background-color="cornflowerblue"

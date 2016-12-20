@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>BAD</title>
+        <title>SCHLAFZIMMER</title>
 </head>
 <body>
 
@@ -70,27 +70,27 @@
 	<header class="headerTransparent">TEMP / HUM</header>
 	<div class="top-space-mobile">
 		<div data-type="label"
-			 data-device="bad_Sensor"
+			 data-device="sz_WT"
 			 data-get="temperature"
-			 
-			 data-limits='[-70,25,25]'
+			 data-unit="%B0C%0A"
+			 data-limits='[-70,20,25]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<div data-type="label"
-			 data-device="bad_Sensor"
-			 data-get="humidity"
-			 
+			 data-device=""
+			 data-get=""
+			 data-unit="%"
 			 data-limits='[0,40,61]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
-			 class="big inline">
+			 class="big inline">XX%
 		</div>
 		<hr width="85%" class="">
-		<div class="big narrow orange">Wohnzimmer
+		<div data-type="label"
+			 class="large narrow orange">Schlafzimmer
 		</div>
 	</div>
 </li>
-
 
 <li class="halbTransparent border-left" data-row="2" data-col="3" data-sizex="2" data-sizey="1">
 </li>
@@ -100,19 +100,20 @@
 	<div class="top-space-mobile">
 		<div class="inline">
 			<div data-type="symbol"
-				 data-device="bad_SC"
+				 data-device="sz_SC"
 				 data-get-on="opened.*"
 				 data-get-off="closed.*"
 				 data-on-color="firebrick"
 				 data-off-color="#3D4C66"
 				 class="">
 			</div>
-			<div class="narrow">&nbsp;
+			<div data-type="label"
+				 class="narrow">&nbsp;
 			</div>
 		</div>
 		<div class="inline">
 			<div data-type="switch"
-				 data-device="bad_WT"
+				 data-device="sz_WT"
 				 data-get="desiredTemperature"
 				 data-get-on="15.0"
 				 data-get-off="^(?!15.0).*$"
@@ -127,14 +128,15 @@
 				 data-off-background-color="#3D4C66"
 				 class="">
 			</div>
-			<div class="narrow">15°C
+			<div data-type="label"
+				 class="narrow">15°C
 			</div>
 		</div>
 		<div class="inline">
             <div data-type="spinner"
-                 data-device="Heizung_Bad"
-				 data-get="desired"
-				 data-set="desired"
+                 data-device="sz_WT"
+				 data-get="desiredTemperature"
+				 data-set="desiredTemperature"
                  data-icon-left-color="blue"
                  data-icon-right-color="red"
                  data-min="4.5"
@@ -147,12 +149,13 @@
 				 data-background-color="none"
                  class="valueonly">
             </div>
-			<div class="narrow">Temperatur
+			<div data-type="label"
+				 class="narrow">Temperatur
 			</div>
 		</div>
 		<div class="inline">
 			<div data-type="switch"
-				 data-device="bad_WT"
+				 data-device="sz_WT"
 				 data-get="desiredTemperature"
 				 data-get-on="22.0"
 				 data-get-off="^(?!22.0).*$"
@@ -167,46 +170,29 @@
 				 data-off-background-color="#3D4C66"
 				 class="">
 			</div>
-			<div class="narrow">22°C
+			<div data-type="label"
+				 class="narrow">22°C
 			</div>
 		</div>
 	</div>
 </li>
 
 <li class="halbTransparent border-left border-right" data-row="4" data-col="1" data-sizex="1" data-sizey="1">
-	<header class="headerTransparent">LICHT</header>
-	<div class="">
-		<div data-type="switch"
-			 data-device="bad_aktor_licht"
-			 data-on-color="black"
-			 data-off-color="#808080"
-			 data-on-background-color="cornflowerblue"
-			 data-off-background-color="#3D4C66"
-			 data-icon="fa-lightbulb-o"
-			 class="cell">
-		</div>
+    <header class="headerTransparent">WÄRMEBETT</header>
+	<div data-type="switch"
+		 data-icon="fa-bed"
+		 data-device="sz_ZS"
+		 data-get="desiredTemperature"
+		 data-set="desiredTemperature"
+		 data-on-color="black"
+		 data-off-color="#808080"
+		 data-on-background-color="cornflowerblue"
+		 data-off-background-color="#3D4C66"
+		 class="cell">
 	</div>
 </li>
 
-<li class="halbTransparent" data-row="4" data-col="2" data-sizex="1" data-sizey="1">
-	<header class="headerTransparent">SPIEGEL</header>
-	<div class="">
-		<div data-type="switch"
-			 data-device="bad_aktor_spiegelschrank"
-			 data-on-color="black"
-			 data-off-color="#808080"
-			 data-on-background-color="cornflowerblue"
-			 data-off-background-color="#3D4C66"
-			 data-icon="fa-lightbulb-o"
-			 class="cell">
-		</div>
-	</div>
-</li>
-
-<li class="halbTransparent border-left" data-row="4" data-col="3" data-sizex="1" data-sizey="1">
-</li>
-
-<li class="halbTransparent" data-row="4" data-col="4" data-sizex="1" data-sizey="1">
+<li class="halbTransparent" data-row="4" data-col="2" data-sizex="3" data-sizey="1">
 </li>
 
 <li class="halbTransparent" data-row="5" data-col="1" data-sizex="4" data-sizey="1">
@@ -217,7 +203,7 @@
 	<div class="">
 		<div class="inline">
 			<div data-type="symbol"
-				 data-device="bad_WT"
+				 data-device="sz_WT"
 				 data-get="battery"
 				 data-states='["ok","low"]'
 				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
@@ -229,7 +215,7 @@
 		</div>
 		<div class="inline">
 			<div data-type="symbol"
-				 data-device="bad_HT"
+				 data-device="sz_HT"
 				 data-get="battery"
 				 data-states='["ok","low"]'
 				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
@@ -241,7 +227,7 @@
 		</div>
 		<div class="inline">
 			<div data-type="symbol"
-				 data-device="bad_SC"
+				 data-device="sz_SC"
 				 data-get="battery"
 				 data-states='["ok","low"]'
 				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'

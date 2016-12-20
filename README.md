@@ -1,2 +1,2 @@
 # FhemMobile
-Its the fhem version for the mobile phone. 
+Its the first version for the mobile phone. 
