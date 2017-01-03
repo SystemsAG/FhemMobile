@@ -86,7 +86,7 @@
 			 class="big inline">
 		</div>
 		<hr width="85%" class="">
-		<div class="big narrow orange">Wohnzimmer
+		<div class="big narrow orange">Rolladen
 		</div>
 	</div>
 </li>
@@ -115,73 +115,107 @@
 	</div>
 </li>
 
+
+
+
 <li class="halbTransparent border-left border-right" data-row="3" data-col="1" data-sizex="4" data-sizey="1">
-	<header class="headerTransparent">HEIZUNG</header>
+
+	<header class="headerTransparent">WOHNZIMMER</header>
 	
-		<div class="inline">
-			<div data-type="switch"
-				 data-device="Heizung_Wohnzimmer"
-				 data-get="desired"
-				 data-get-on="15.0"
-				 data-get-off="^(?!15.0).*$"
-				 data-set="desiredTemperature"
-				 data-set-on="eco"
-				 data-set-off=""
-				 data-icon="ma-brightness_3"
-				 data-background-icon="fa-circle-thin"
-				 data-on-color="cornflowerblue"
-				 data-off-color="#808080"
-				 data-on-background-color="#aa6900"
-				 data-off-background-color="#3D4C66"
-				 class="">
+		<div class="left-space-4x">
+			<div data-type="circlemenu">
+				<ul>
+				  
+					<li><div data-type="symbol" 
+							data-device="wz_lRolladen" 
+							data-get="statePosition" 
+							data-states='["on","off","open_ack","closed","[0-9]","1[0-9]","2[0-9]","3[0-9]","4[0-9]","5[0-9]","6[0-9]","7[0-9]","8[0-9]","9[0-9]","100"]'
+							data-icons='["halbTransparent oa-fts_shutter_up","halbTransparent oa-fts_shutter_down","halbTransparent oa-fts_window_2w","halbTransparent oa-fts_shutter_100","halbTransparent oa-fts_shutter_100","halbTransparent oa-fts_shutter_90","halbTransparent oa-fts_shutter_80","halbTransparent oa-fts_shutter_70","halbTransparent oa-fts_shutter_60","halbTransparent oa-fts_shutter_50","halbTransparent oa-fts_shutter_40","halbTransparent oa-fts_shutter_30","halbTransparent oa-fts_shutter_20","halbTransparent oa-fts_shutter_10","halbTransparent oa-fts_shutter_10"]'
+							data-colors='["yellow","yellow","green","green","green","#505050","#505050","#505050","#505050","#505050","#505050","#505050","#505050","orange","orange"]'
+							
+						></div></li>
+					<li><div data-type="switch" 
+								data-device="sw_rollladenAutomatik"
+								data-icon="oa-fts_shutter_automatic"></div>
+					<li><div data-type="push" 
+								data-device="wz_lRolladen" 
+								data-set-on="off" 
+								data-icon="halbTransparent fa-angle-down"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_lRolladen" 
+								data-set-on="stop" 
+								data-icon="oa-audio_stop"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_lRolladen" 
+								data-set-on="on"
+								data-icon="fa-angle-up"></div></li>
+					
+				</ul>
+				
+				
+				
+				<ul class="inline"> 
+					<li><div data-type="symbol" 
+							data-device="wz_mRolladen" 
+							data-get="statePosition" 
+							data-states='["on","off","open_ack","closed","[0-9]","1[0-9]","2[0-9]","3[0-9]","4[0-9]","5[0-9]","6[0-9]","7[0-9]","8[0-9]","9[0-9]","100"]'
+							data-icons='["halbTransparent oa-fts_shutter_down","halbTransparent oa-fts_shutter_up","halbTransparent oa-fts_shutter_100","halbTransparent oa-fts_window_2w","halbTransparent oa-fts_shutter_10","halbTransparent oa-fts_shutter_10","halbTransparent oa-fts_shutter_20","halbTransparent oa-fts_shutter_30","halbTransparent oa-fts_shutter_40","halbTransparent oa-fts_shutter_50","halbTransparent oa-fts_shutter_60","halbTransparent oa-fts_shutter_70","halbTransparent oa-fts_shutter_80","halbTransparent oa-fts_shutter_90","halbTransparent oa-fts_shutter_100"]'
+							data-colors='["yellow","yellow","green","green","orange","#505050","#505050","#505050","#505050","#505050","#505050","#505050","#505050","green","#505050"]'
+							
+						></div></li>
+					<li><div data-type="switch" 
+								data-device="sw_rollladenAutomatik"
+								data-icon="oa-fts_shutter_automatic"></div>
+					<li><div data-type="push" 
+								data-device="wz_mRolladen" 
+								data-set-on="on" 
+								data-icon="halbTransparent fa-angle-down"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_mRolladen" 
+								data-set-on="stop" 
+								data-icon="oa-audio_stop"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_mRolladen" 
+								data-set-on="off"
+								data-icon="fa-angle-up"></div></li>
+				</ul>
+				
+				<ul class="right"> 
+					<li><div data-type="symbol" 
+							data-device="wz_rRolladen" 
+							data-get="statePosition" 
+							data-states='["on","off","open_ack","closed","[0-9]","1[0-9]","2[0-9]","3[0-9]","4[0-9]","5[0-9]","6[0-9]","7[0-9]","8[0-9]","9[0-9]","100"]'
+							data-icons='["halbTransparent oa-fts_shutter_up","halbTransparent oa-fts_shutter_down","halbTransparent oa-fts_window_2w","halbTransparent oa-fts_shutter_100","halbTransparent oa-fts_shutter_100","halbTransparent oa-fts_shutter_90","halbTransparent oa-fts_shutter_80","halbTransparent oa-fts_shutter_70","halbTransparent oa-fts_shutter_60","halbTransparent oa-fts_shutter_50","halbTransparent oa-fts_shutter_40","halbTransparent oa-fts_shutter_30","halbTransparent oa-fts_shutter_20","halbTransparent oa-fts_shutter_10","halbTransparent oa-fts_shutter_10"]'
+							data-colors='["yellow","yellow","green","green","green","#505050","#505050","#505050","#505050","#505050","#505050","#505050","#505050","orange","orange"]'
+							
+						></div></li>
+					<li><div data-type="switch" 
+								data-device="sw_rollladenAutomatik"
+								data-icon="oa-fts_shutter_automatic"></div>
+					<li><div data-type="push" 
+								data-device="wz_rRolladen" 
+								data-set-on="on" 
+								data-icon="halbTransparent fa-angle-down"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_rRolladen" 
+								data-set-on="stop" 
+								data-icon="oa-audio_stop"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_rRolladen" 
+								data-set-on="off"
+								data-icon="fa-angle-up"></div></li>
+				</ul>
+				
 			</div>
-			<div class="narrow">15°C
-			</div>
-		</div>
-		<div class="inline">
-            <div data-type="spinner"
-             data-device="Heizung_Wohnzimmer"
-				 data-get="desired"
-				 data-set="desired"
-             data-icon-left-color="blue"
-             data-icon-right-color="red"
-             data-min="4.5"
-             data-max="25.0"
-				 data-step="0.5"
-				 data-width="150"
-				 data-height="40"
-				 data-unit="°"
-				 data-longdelay="250"
-				 data-background-color="black"
-                 class="valueonly">
-            </div>
-			<div class="narrow">Temperatur
-			</div>
-		</div>
-		<div class="inline">
-			<div data-type="switch"
-				 data-device="Heizung_Wohnzimmer"
-				 data-get="desired"
-				 data-get-on="22.0"
-				 data-get-off="^(?!22.0).*$"
-				 data-set="desiredTemperature"
-				 data-set-on="comfort"
-				 data-set-off=""
-				 data-icon="ro-sun"
-				 data-background-icon="fa-circle-thin"
-				 data-on-color="green"
-				 data-off-color="#808080"
-				 data-on-background-color="#aa6900"
-				 data-off-background-color="#3D4C66"
-				 class="">
-			</div>
-			<div class="narrow">22°C
-			</div>
+					
+		
 		</div>
 	
+
 </li>
 
-<li class="halbTransparent" data-row="5" data-col="1" data-sizex="2" data-sizey="1">
+
+<li class="halbTransparent" data-row="4" data-col="1" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">SAMSUNG TV</header>
 	<div data-type="switch"
 		 data-device="SamsungTv"
@@ -220,35 +254,7 @@
 <li class="halbTransparent" data-row="5" data-col="3" data-sizex="2" data-sizey="1">
 <header class="headerTransparent">VOL</header>
 
-<div class="container">
-			<div data-type="circlemenu" class="cell circlemenu">
-				<ul class="menu">
-					<li><div data-type="symbol" 
-							data-device="wz_lRolladen" 
-							data-get="statePosition" 
-							data-states='["on","off","open_ack","closed","[0-9]","1[0-9]","2[0-9]","3[0-9]","4[0-9]","5[0-9]","6[0-9]","7[0-9]","8[0-9]","9[0-9]","100"]'
-							data-icons='["halbTransparent oa-fts_shutter_up","halbTransparent oa-fts_shutter_down","halbTransparent oa-fts_window_2w","halbTransparent oa-fts_shutter_100","halbTransparent oa-fts_shutter_100","halbTransparent oa-fts_shutter_90","halbTransparent oa-fts_shutter_80","halbTransparent oa-fts_shutter_70","halbTransparent oa-fts_shutter_60","halbTransparent oa-fts_shutter_50","halbTransparent oa-fts_shutter_40","halbTransparent oa-fts_shutter_30","halbTransparent oa-fts_shutter_20","halbTransparent oa-fts_shutter_10","halbTransparent oa-fts_shutter_10"]'
-							data-colors='["yellow","yellow","green","green","#505050","#505050","#505050","#505050","#505050","#505050","#505050","#505050","#505050","yellow","#505050"]'
-						></div></li>
-					<li><div data-type="switch" 
-								data-device="sw_rollladenAutomatik"
-								data-icon="oa-fts_shutter_automatic"></div>
-					<li><div data-type="push" 
-								data-device="wz_lRolladen" 
-								data-set-on="off" 
-								data-icon="halbTransparent fa-angle-down"></div></li>
-					<li><div data-type="push" 
-								data-device="wz_lRolladen" 
-								data-set-on="stop" 
-								data-icon="oa-audio_stop"></div></li>
-					<li><div data-type="push" 
-								data-device="wz_lRolladen" 
-								data-set-on="on"
-								data-icon="fa-angle-up"></div></li>
-				</ul>
-			</div>
-			<div data-type="label">Rolladen</div>
-</div>
+
 </li>
 
 

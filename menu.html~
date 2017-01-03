@@ -86,7 +86,7 @@
 			 data-device="bu_alert"
 			 data-icon="oa-fts_shutter"
 			 data-get-on='["low","ok"]'
-			 data-url="rolladen.html"
+			 data-url="buro.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
 			 data-on-color="#808080"

@@ -67,7 +67,7 @@
 </li>
 
 <li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1">
-	<header class="headerTransparent">TEMP / LUX</header>
+	<header class="headerTransparent">TEMP / LICHT</header>
 	<div class="top-space-mobile">
 		<div data-type="label"
 			 data-device="wz_Sensor"
@@ -252,7 +252,7 @@
 								 data-set-on="on"
 								 data-on-color="black"
 								 data-off-color="#808080"
-								 data-on-background-color="cornflowerblue"
+								 
 								 data-off-background-color="#3D4C66"
 								 data-icon="oa-light_pendant_light_round"
 								 class="">
