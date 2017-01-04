@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="/fhem/tablet/lib/fhemSVG.css" />
 		<link rel="stylesheet" href="/fhem/tablet/lib/openautomation.css" />
 		
-		<link rel="stylesheet" href="/fhem/tablet/fonts/roman/style.css" />
+		<link rel="stylesheet" href="/fhem/tablet/fonts/roman/style.css" /> <!-- own Icons -->
 		<link rel="stylesheet" href="/fhem/tablet/fonts/material/style.css" />
 		
         <link rel="stylesheet" href="/fhem/mobile/css/fhem-tablet-ui-user_mobile.css" />
