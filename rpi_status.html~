@@ -130,7 +130,7 @@
 		<div data-type="push"
 			 data-background-icon="none"
 			 data-icon="fs-system_fhem"
-			 data-url="http://192.168.178.60:8083/fhem"
+			 data-url="http://192.168.1.5:8083/fhem"
 			 data-on-color="#808080"
 			 data-off-color="#808080"
 			 class="inline">

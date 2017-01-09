@@ -72,7 +72,8 @@
 		<div data-type="label"
 			 data-device="wz_Sensor"
 			 data-get="temperature"
-			 
+			 data-part="1"
+			 data-unit="%B0C%0A"
 			 data-limits='[-70,25,25]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
 			 class="big inline">
@@ -80,13 +81,14 @@
 		<div data-type="label"
 			 data-device="wz_Sensor"
 			 data-get="luminance"
-			 
+			 data-part="1"
+			 data-unit="lux"
 			 data-limits='[0,40,61]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<hr width="85%" class="">
-		<div class="big narrow orange">Wohnzimmer
+		<div class="big narrow orange">Schlafzimmer
 		</div>
 	</div>
 </li>
@@ -98,19 +100,6 @@
 <li class="halbTransparent border-left border-right" data-row="3" data-col="1" data-sizex="4" data-sizey="1">
 	<header class="headerTransparent">HEIZUNG</header>
 	<div class="top-space-mobile">
-		<div class="inline">
-			<div data-type="symbol"
-				 data-device="sz_SC"
-				 data-get-on="opened.*"
-				 data-get-off="closed.*"
-				 data-on-color="firebrick"
-				 data-off-color="#3D4C66"
-				 class="">
-			</div>
-			<div data-type="label"
-				 class="narrow">&nbsp;
-			</div>
-		</div>
 		<div class="inline">
 			<div data-type="switch"
 				 data-device="sz_WT"
@@ -134,23 +123,22 @@
 		</div>
 		<div class="inline">
             <div data-type="spinner"
-                 data-device="sz_WT"
-				 data-get="desiredTemperature"
-				 data-set="desiredTemperature"
-                 data-icon-left-color="blue"
-                 data-icon-right-color="red"
-                 data-min="4.5"
-                 data-max="25.0"
+             data-device="Heizung_Schlafzimmer"
+				 data-get="desired"
+				 data-set="desired"
+             data-icon-left-color="blue"
+             data-icon-right-color="red"
+             data-min="4.5"
+             data-max="25.0"
 				 data-step="0.5"
-				 data-width="130"
-				 data-height="47"
+				 data-width="150"
+				 data-height="40"
 				 data-unit="°"
-				 data-longdelay="2500"
-				 data-background-color="none"
+				 data-longdelay="250"
+				 data-background-color="black"
                  class="valueonly">
             </div>
-			<div data-type="label"
-				 class="narrow">Temperatur
+			<div class="narrow">Temperatur
 			</div>
 		</div>
 		<div class="inline">
@@ -177,68 +165,55 @@
 	</div>
 </li>
 
-<li class="halbTransparent border-left border-right" data-row="4" data-col="1" data-sizex="1" data-sizey="1">
-    <header class="headerTransparent">WÄRMEBETT</header>
-	<div data-type="switch"
-		 data-icon="fa-bed"
-		 data-device="sz_ZS"
-		 data-get="desiredTemperature"
-		 data-set="desiredTemperature"
-		 data-on-color="black"
-		 data-off-color="#808080"
-		 data-on-background-color="cornflowerblue"
-		 data-off-background-color="#3D4C66"
-		 class="cell">
-	</div>
+<li class="halbTransparent border-left border-right" data-row="4" data-col="1" data-sizex="2" data-sizey="2">
+    <header class="headerTransparent">WANDLICHT</header>
+				<div class="inline top-space-mobile">
+					<div data-type="switch"
+						 data-device="sz_Wandlicht"
+						 data-get-on="on.*"
+						 data-set-on="on"
+						 data-on-color="black"
+						 data-off-color="#808080"
+						 data-on-background-color="cornflowerblue"
+						 data-off-background-color="#3D4C66"
+						 data-icon="oa-light_pendant_light_round"
+						 class="">
+					</div>
+					<div class="">An/Aus
+					</div>
+				</div>
+				<div class="">
+					<div data-type="volume"
+						 data-device="sz_Wandlicht"
+						 data-get="dim"
+						 data-set="dim"
+						 data-min="0"
+						 data-max="100"
+						 data-unit="%"
+						 data-tickstep="10"
+						 class="small dim-tick">
+					</div>
+				</div>
 </li>
 
-<li class="halbTransparent" data-row="4" data-col="2" data-sizex="3" data-sizey="1">
-</li>
-
-<li class="halbTransparent" data-row="5" data-col="1" data-sizex="4" data-sizey="1">
+<li class="halbTransparent" data-row="4" data-col="3" data-sizex="2" data-sizey="2">
 </li>
 
 <li class="halbTransparent border-left border-right" data-row="6" data-col="1" data-sizex="4" data-sizey="1">
     <header class="headerTransparent">BATTERIEN</header>
 	<div class="">
 		<div class="inline">
-			<div data-type="symbol"
-				 data-device="sz_WT"
-				 data-get="battery"
-				 data-states='["ok","low"]'
-				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
-				 data-colors='["green","firebrick"]'
-				 class="">
-			</div>
-			<div class="narrow">Therm.
-			</div>
-		</div>
-		<div class="inline">
-			<div data-type="symbol"
-				 data-device="sz_HT"
-				 data-get="battery"
-				 data-states='["ok","low"]'
-				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
-				 data-colors='["green","firebrick"]'
-				 class="">
+			<div data-type="symbol" data-device="sz_Heizung" data-get="battery"
+		     data-icons='["oa-measure_battery_100","oa-measure_battery_75","oa-measure_battery_50","oa-measure_battery_25","oa-measure_battery_0"]'
+		      data-get-on='["[0-9]{3}\\ %","[789][0-9]\\ %","[456][0-9]\\ %","[123][0-9]\\ %","[0-9]\\ %"]'
+		     data-on-colors='["green","#3ADF00","orange","#FE642E","red"]'>
 			</div>
 			<div class="narrow">Heizung
 			</div>
-		</div>
-		<div class="inline">
-			<div data-type="symbol"
-				 data-device="sz_SC"
-				 data-get="battery"
-				 data-states='["ok","low"]'
-				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
-				 data-colors='["green","firebrick"]'
-				 class="">
-			</div>
-			<div class="narrow">Fenster
-			</div>
-		</div>
+		</div>	
 	</div>
 </li>
+
 
 </ul>
 </div>

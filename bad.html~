@@ -72,21 +72,23 @@
 		<div data-type="label"
 			 data-device="bad_Sensor"
 			 data-get="temperature"
-			 
-			 data-limits='[-70,25,25]'
+			 data-part="1"
+			 data-unit="%B0C%0A"
+			 data-limits='[-70,17,22]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<div data-type="label"
 			 data-device="bad_Sensor"
 			 data-get="humidity"
-			 
+			 data-part="1"
+			 data-unit="%"
 			 data-limits='[0,40,61]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<hr width="85%" class="">
-		<div class="big narrow orange">Wohnzimmer
+		<div class="big narrow orange">Bad
 		</div>
 	</div>
 </li>
@@ -97,27 +99,15 @@
 
 <li class="halbTransparent border-left border-right" data-row="3" data-col="1" data-sizex="4" data-sizey="1">
 	<header class="headerTransparent">HEIZUNG</header>
-	<div class="top-space-mobile">
-		<div class="inline">
-			<div data-type="symbol"
-				 data-device="bad_SC"
-				 data-get-on="opened.*"
-				 data-get-off="closed.*"
-				 data-on-color="firebrick"
-				 data-off-color="#3D4C66"
-				 class="">
-			</div>
-			<div class="narrow">&nbsp;
-			</div>
-		</div>
+	<div class="top-space-mobile">		
 		<div class="inline">
 			<div data-type="switch"
 				 data-device="bad_WT"
-				 data-get="desiredTemperature"
+				 data-get="desired"
 				 data-get-on="15.0"
 				 data-get-off="^(?!15.0).*$"
-				 data-set="desiredTemperature"
-				 data-set-on="eco"
+				 data-set="desired"
+				 data-set-on="15"
 				 data-set-off=""
 				 data-icon="ma-brightness_3"
 				 data-background-icon="fa-circle-thin"
@@ -132,19 +122,19 @@
 		</div>
 		<div class="inline">
             <div data-type="spinner"
-                 data-device="Heizung_Bad"
+             data-device="Heizung_Bad"
 				 data-get="desired"
 				 data-set="desired"
-                 data-icon-left-color="blue"
-                 data-icon-right-color="red"
-                 data-min="4.5"
-                 data-max="25.0"
+             data-icon-left-color="blue"
+             data-icon-right-color="red"
+             data-min="4.5"
+             data-max="25.0"
 				 data-step="0.5"
-				 data-width="130"
-				 data-height="47"
+				 data-width="150"
+				 data-height="40"
 				 data-unit="°"
-				 data-longdelay="2500"
-				 data-background-color="none"
+				 data-longdelay="250"
+				 data-background-color="black"
                  class="valueonly">
             </div>
 			<div class="narrow">Temperatur
@@ -153,11 +143,11 @@
 		<div class="inline">
 			<div data-type="switch"
 				 data-device="bad_WT"
-				 data-get="desiredTemperature"
-				 data-get-on="22.0"
+				 data-get="desired"
+				 data-get-on="20.0"
 				 data-get-off="^(?!22.0).*$"
-				 data-set="desiredTemperature"
-				 data-set-on="comfort"
+				 data-set="desired"
+				 data-set-on="20"
 				 data-set-off=""
 				 data-icon="ro-sun"
 				 data-background-icon="fa-circle-thin"
@@ -167,7 +157,7 @@
 				 data-off-background-color="#3D4C66"
 				 class="">
 			</div>
-			<div class="narrow">22°C
+			<div class="narrow">20°C
 			</div>
 		</div>
 	</div>
@@ -203,54 +193,69 @@
 	</div>
 </li>
 
-<li class="halbTransparent border-left" data-row="4" data-col="3" data-sizex="1" data-sizey="1">
+<li class="halbTransparent border-left" data-row="4" data-col="3" data-sizex="2" data-sizey="1">
+		<header class="headerTransparent">FENSTER</header>
+	<div class="centered">		
+		<div  class="right circlemenu" data-type="circlemenu">
+				<ul>
+				  	<li><div data-type="symbol" 
+							data-device="bad_Fenster" 
+							data-get="statePosition" 
+							data-states='["on","off","[0-9]","[1-8][0-9]","9[0-9]","100"]'
+							data-icons='["halbTransparent oa-control_arrow_up","halbTransparent oa-control_arrow_down","halbTransparent oa-fts_window_roof","halbTransparent oa-fts_window_roof_open_1","halbTransparent oa-fts_window_roof_open_2","halbTransparent oa-fts_window_roof_open_2"]'
+							data-colors='["yellow","yellow","green","orange","red","red"]'							
+						></div></li>
+					<li><div data-type="switch" 
+								data-device="sw_rollladenAutomatik"
+								data-icon="oa-fts_shutter_automatic"></div></li>
+					<li><div data-type="push" 
+								data-device="bad_Fenster" 
+								data-set-on="off" 
+								data-icon="fa-angle-down"></div></li>
+					<li><div data-type="push" 
+								data-device="bad_Fenster" 
+								data-set-on="stop" 
+								data-icon="oa-audio_stop"></div></li>
+					<li><div data-type="push" 
+								data-device="bad_Fenster" 
+								data-set-on="on"
+								data-icon="fa-angle-up"></div></li>
+					
+				</ul>
+			</div>
+			<div data-type="label" data-device="bad_Fenster" data-get="statePosition" data-unit="%" data-limits='[-70,50,99]' data-colors='["cornflowerblue","green","firebrick"]' class="big cell">
+		</div>
+	</div>	
 </li>
 
-<li class="halbTransparent" data-row="4" data-col="4" data-sizex="1" data-sizey="1">
-</li>
+
 
 <li class="halbTransparent" data-row="5" data-col="1" data-sizex="4" data-sizey="1">
+
 </li>
 
 <li class="halbTransparent border-left border-right" data-row="6" data-col="1" data-sizex="4" data-sizey="1">
     <header class="headerTransparent">BATTERIEN</header>
 	<div class="">
 		<div class="inline">
-			<div data-type="symbol"
-				 data-device="bad_WT"
-				 data-get="battery"
-				 data-states='["ok","low"]'
-				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
-				 data-colors='["green","firebrick"]'
-				 class="">
+			<div data-type="symbol" data-device="bad_Sensor" data-get="battery"
+		     data-icons='["oa-measure_battery_100","oa-measure_battery_75","oa-measure_battery_50","oa-measure_battery_25","oa-measure_battery_0"]'
+		      data-get-on='["[0-9]{3}\\ %","[789][0-9]\\ %","[456][0-9]\\ %","[123][0-9]\\ %","[0-9]\\ %"]'
+		     data-on-colors='["green","#3ADF00","orange","#FE642E","red"]'>
 			</div>
-			<div class="narrow">Therm.
+			<div class="narrow">Sensor
 			</div>
 		</div>
+	
 		<div class="inline">
-			<div data-type="symbol"
-				 data-device="bad_HT"
-				 data-get="battery"
-				 data-states='["ok","low"]'
-				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
-				 data-colors='["green","firebrick"]'
-				 class="">
+			<div data-type="symbol" data-device="bad_Heizung" data-get="battery"
+		     data-icons='["oa-measure_battery_100","oa-measure_battery_75","oa-measure_battery_50","oa-measure_battery_25","oa-measure_battery_0"]'
+		      data-get-on='["[0-9]{3}\\ %","[789][0-9]\\ %","[456][0-9]\\ %","[123][0-9]\\ %","[0-9]\\ %"]'
+		     data-on-colors='["green","#3ADF00","orange","#FE642E","red"]'>
 			</div>
 			<div class="narrow">Heizung
 			</div>
-		</div>
-		<div class="inline">
-			<div data-type="symbol"
-				 data-device="bad_SC"
-				 data-get="battery"
-				 data-states='["ok","low"]'
-				 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
-				 data-colors='["green","firebrick"]'
-				 class="">
-			</div>
-			<div class="narrow">Fenster
-			</div>
-		</div>
+		</div>	
 	</div>
 </li>
 

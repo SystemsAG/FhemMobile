@@ -172,19 +172,20 @@
 </li>
 
 <li class="halbTransparent border-right" data-row="3" data-col="2" data-sizex="1" data-sizey="2">
-	<header class="headerTransparent">AB</header>
-	<div class="top-space-mobile">
-		<div data-type="symbol"
-			 data-background-icon="none"
-			 data-device="FritzBox_7362"
-			 data-get="tam1_newMsg"
-			 data-states='["0","[1-9]{1}|[0-9]{2}"]'
-			 data-icons='["ma-voicemail","ma-voicemail warn"]'
-			 data-on-colors='["#808080","#aa6900"]'
+	<header class="headerTransparent">MAINSWITCH</header>
+	<div class="top">Licht</div>
+	<div class="top">
+		<div data-type="switch"
+			 data-device="HpLichtschalter"
+			 data-get="state"
+			 data-on-color="black"
+			 data-off-color="#808080"
+			 data-on-background-color="cornflowerblue"
+			 data-off-background-color="#3D4C66"
+			 data-icon="fa-bolt"
 			 class="">
 		</div>
-		<div class="">Nachrichten
-		</div>
+		<div class="">An/Aus</div>
 	</div>
 	<div class="top-space">
 		<div data-type="switch"
