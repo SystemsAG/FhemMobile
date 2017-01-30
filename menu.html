@@ -15,8 +15,8 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="cell">
@@ -29,8 +29,8 @@
 		 data-url="menu.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bars"
 		 class="cell">
 	</div>
@@ -45,8 +45,8 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="cell">
@@ -59,83 +59,18 @@
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-cloud"
 		 class="cell">
 	</div>
 </li>
 
-<li class="halbTransparent border-left border-right" data-row="2" data-col="1" data-sizex="4" data-sizey="2">
+<li class="halbTransparent border-left border-right" data-row="2" data-col="1" data-sizex="4" data-sizey="1">
 	<header class="headerTransparent">RÄUME</header>
 	<div class="top-space">
-		<div data-type="pagetab"
-			 data-device="bad_alert"
-			 data-icon="fa-tint"
-			 data-get-on='["low","ok"]'
-			 data-url="bad.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["fa-tint warn","fa-tint"]'
-			 data-text="Bad"
-			 class="cell inline">
-		</div>
-		<div data-type="pagetab"
-			 data-device="bu_alert"
-			 data-icon="oa-fts_shutter"
-			 data-get-on='["low","ok"]'
-			 data-url="rolladen.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["ro-pc warn","ro-pc"]'
-			 data-text="Rolladen"
-			 class="cell inline">
-		</div>
-		<div data-type="pagetab"
-			 data-device="fl_alert"
-			 data-icon="ro-hanger"
-			 data-get-on='["low","ok"]'
-			 data-url="flur.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["ro-hanger warn","ro-hanger"]'
-			 data-text="Flur"
-			 class="cell inline">
-		</div>
-		<div data-type="pagetab"
-			 data-device="ku_alert"
-			 data-icon="fa-cutlery"
-			 data-get-on='["low","ok"]'
-			 data-url="kuche.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["fa-cutlery warn","fa-cutlery"]'
-			 data-text="Küche"
-			 class="cell inline">
-		</div>
-	</div>
-	<div class="top-space">
-		<div data-type="pagetab"
-			 data-device="sz_alert"
-			 data-icon="fa-bed"
-			 data-get-on='["low","ok"]'
-			 data-url="schlafzimmer.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["fa-bed warn","fa-bed"]'
-			 data-text="Schlafen"
-			 class="cell inline">
-		</div>
+	
+	<div class="inline">	
 		<div data-type="pagetab"
 			 data-device="wz_alert"
 			 data-icon="ro-sofa"
@@ -143,12 +78,86 @@
 			 data-url="wohnzimmer.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["ro-sofa warn","ro-sofa"]'
-			 data-text="Wohnen"
-			 class="cell inline">
+			 data-on-color="orange"
+			 data-off-color="lightgray"
+			 data-icons='["ro-sofa warn","ro-sofa"]'			 
+			 >
 		</div>
+		<div class="top-narrow-10">Wohnen</div>
+	</div>
+	
+	<div class="inline">
+		<div data-type="pagetab"
+			 data-device="sz_alert"
+			 data-icon="fa-bed"
+			 data-get-on='["low","ok"]'
+			 data-url="schlafzimmer.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="orange"
+			 data-off-color="lightgray"
+			 data-icons='["fa-bed warn","fa-bed"]'			
+			 >
+		</div>
+		<div class="top-narrow-10">Schlafen</div>
+	</div>
+	
+	<div class="inline">
+		<div data-type="pagetab"
+			 data-device="bad_alert"
+			 data-icon="fa-tint"
+			 data-get-on='["low","ok"]'
+			 data-url="bad.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="orange"
+			 data-off-color="lightgray"
+			 data-icons='["fa-tint warn","fa-tint"]'			 
+			 >
+		</div>
+		<div class="top-narrow-10">Bad</div>
+	</div>
+					
+	
+		
+		<div class="inline">	
+		<div data-type="pagetab"
+			 data-device="fl_alert"
+			 data-icon="ro-hanger"
+			 data-get-on='["low","ok"]'
+			 data-url="flur.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="orange"
+			 data-off-color="lightgray"
+			 data-icons='["ro-hanger warn","ro-hanger"]'			 
+			 >
+		</div>
+		<div class="top-narrow-10">Flur</div>
+		</div>
+		
+</li>
+	
+<li class="halbTransparent border-left border-right" data-row="3" data-col="1" data-sizex="4" data-sizey="1">	
+	<div class="top-space">
+		
+	<div class="inline">	
+		<div data-type="pagetab"
+			 data-device="bu_alert"
+			 data-icon="oa-fts_shutter"
+			 data-get-on='["low","ok"]'
+			 data-url="rolladen.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="orange"
+		  	 data-off-color="lightgray"
+			 data-icons='["ro-pc warn","ro-pc"]'
+			 >
+		</div>
+		<div class="top-narrow-10">Rolladen</div>
+	</div>	
+	
+	<div class="inline">	
 		<div data-type="pagetab"
 			 data-device="dr_ga_alert"
 			 data-icon="fa-tree"
@@ -156,13 +165,30 @@
 			 data-url="draussen_garage.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["fa-tree","fa-tree warn"]'
-			 data-text="Draußen"
-			 class="cell inline">
+			 data-on-color="orange"
+			 data-off-color="lightgray"
+			 data-icons='["fa-tree","fa-tree warn"]'			 
+			 >
 		</div>
+		<div class="top-narrow-10">Draußen</div>
 	</div>
+	
+	<div class="inline">
+		<div data-type="pagetab"
+			 data-device="ku_alert"
+			 data-icon="fa-cutlery"
+			 data-get-on='["low","ok"]'
+			 data-url="kuche.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="orange"
+			 data-off-color="lightgray"
+			 data-icons='["fa-cutlery warn","fa-cutlery"]'			 
+			 >
+		</div>
+		<div class="top-narrow-10">Küche</div>
+	</div>
+	
 </li>
 
 <li class="halbTransparent border-left border-right" data-row="4" data-col="1" data-sizex="4" data-sizey="1">
@@ -173,12 +199,11 @@
 			 data-url="rpi_status.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-text="RasPi"
+			 data-on-color="orange"
+			 data-off-color="lightgray"
 			 class="">
 		</div>
-		<div class="">&nbsp;
+		<div class="">PI
 		</div>
 	</div>
 	<div class="inline left-space-3">
@@ -187,7 +212,7 @@
 			data-get="savestate"
 			data-states='["0","1"]'
 			data-icons='["fa-edit","fa-edit fa-lg"]'
-			data-colors='["#808080","firebrick"]'
+			data-colors='["lightgrey","firebrick"]'
 			data-icon="fa-edit"
 			class="">
 		</div>
@@ -199,7 +224,7 @@
 	<div class="inline">
 		<div data-type="push"
 			 data-fhem-cmd="save"
-			 data-off-color="#808080"
+			 data-off-color="lightgray"
 			 data-off-background-color="#3D4C66"
 			 data-icon="fa-floppy-o"
 			 class="">

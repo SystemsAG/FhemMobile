@@ -7,6 +7,10 @@
 
 <div class="gridster">
 <ul>
+
+
+<!-- ----------------------------------------------------------------------Hear starts the HEADER------------------------------------------------------ -->
+
 <li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">HOME</header>
 	<div data-type="pagetab"
@@ -15,8 +19,8 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="big cell">
@@ -29,8 +33,8 @@
 		 data-url="menu.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bars"
 		 class="big cell">
 	</div>
@@ -45,8 +49,8 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="big cell">
@@ -59,12 +63,15 @@
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-cloud"
 		 class="big cell">
 	</div>
 </li>
+
+<!-- ----------------------------------------------------------------------Hear ends the HEADER------------------------------------------------------ -->
+
 
 <li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">TEMP / LICHT</header>
@@ -74,7 +81,7 @@
 			 data-get="temperature"
 			 data-part="1"
 			 data-unit="%B0C%0A"
-			 data-limits='[-70,25,25]'
+			 data-limits='[-70,20,25]'
 			 data-colors='["cornflowerblue","green","firebrick"]'
 			 class="big inline">
 		</div>
@@ -88,7 +95,7 @@
 			 class="big inline">
 		</div>
 		<hr width="85%" class="">
-		<div class="big narrow orange">Schlafzimmer
+		<div class="big narrow orange_hell">Schlafzimmer
 		</div>
 	</div>
 </li>
@@ -102,19 +109,19 @@
 	<div class="top-space-mobile">
 		<div class="inline">
 			<div data-type="switch"
-				 data-device="sz_WT"
-				 data-get="desiredTemperature"
-				 data-get-on="15.0"
+				 data-device="Heizung_Schlafzimmer"
+				 data-get="desired"
+				 data-get-on="15"
 				 data-get-off="^(?!15.0).*$"
-				 data-set="desiredTemperature"
-				 data-set-on="eco"
+				 data-set="desired"
+				 data-set-on="15"
 				 data-set-off=""
 				 data-icon="ma-brightness_3"
 				 data-background-icon="fa-circle-thin"
-				 data-on-color="cornflowerblue"
-				 data-off-color="#808080"
-				 data-on-background-color="#aa6900"
-				 data-off-background-color="#3D4C66"
+				 data-on-color="black"
+				 data-off-color="lightgrey"
+				 data-on-background-color="cornflowerblue"
+				 data-off-background-color="grey"
 				 class="">
 			</div>
 			<div data-type="label"
@@ -143,19 +150,19 @@
 		</div>
 		<div class="inline">
 			<div data-type="switch"
-				 data-device="sz_WT"
-				 data-get="desiredTemperature"
-				 data-get-on="22.0"
+				 data-device="Heizung_Schlafzimmer"
+				 data-get="desired"
+				 data-get-on="22"
 				 data-get-off="^(?!22.0).*$"
-				 data-set="desiredTemperature"
-				 data-set-on="comfort"
+				 data-set="desired"
+				 data-set-on="22"
 				 data-set-off=""
 				 data-icon="ro-sun"
 				 data-background-icon="fa-circle-thin"
-				 data-on-color="green"
-				 data-off-color="#808080"
-				 data-on-background-color="#aa6900"
-				 data-off-background-color="#3D4C66"
+				 data-on-color="black"
+				 data-off-color="lightgrey"
+				 data-on-background-color="orange"
+				 data-off-background-color="grey"
 				 class="">
 			</div>
 			<div data-type="label"
@@ -170,12 +177,12 @@
 				<div class="inline top-space-mobile">
 					<div data-type="switch"
 						 data-device="sz_Wandlicht"
-						 data-get-on="on.*"
+						 data-get-on="!off"
 						 data-set-on="on"
 						 data-on-color="black"
-						 data-off-color="#808080"
-						 data-on-background-color="cornflowerblue"
-						 data-off-background-color="#3D4C66"
+						 data-off-color="lightgrey"
+						 data-on-background-color="orange"
+						 data-off-background-color="grey"
 						 data-icon="oa-light_pendant_light_round"
 						 class="">
 					</div>
@@ -186,6 +193,7 @@
 					<div data-type="volume"
 						 data-device="sz_Wandlicht"
 						 data-get="dim"
+						 data-get-value="2"
 						 data-set="dim"
 						 data-min="0"
 						 data-max="100"

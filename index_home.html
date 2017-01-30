@@ -15,8 +15,8 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="cell">
@@ -29,8 +29,8 @@
 		 data-url="menu.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bars"
 		 class="cell">
 	</div>
@@ -45,8 +45,8 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="cell">
@@ -59,8 +59,8 @@
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-cloud"
 		 class="cell">
 	</div>
@@ -123,12 +123,12 @@
 		 data-type="clock"
 		 data-format="H:i"
 		 data-interval="1000"
-		 class="large thin top-space-mobile-2">
+		 class="bold large top-space-mobile-2">
 	</div>
 	<div data-type="clock"
 		 data-format="d.m.Y"
 		 data-shortday-length="2"
-		 class="grey">
+		 class="grey bold">
 	</div>
 </li>
 
@@ -137,19 +137,19 @@
 	<div class="top-space">
 		<div data-type="button"
 			 data-background-icon="none"
-			 data-device="myAbfall"
-			 data-get="Restmuell_tage"
-			 data-off-color="#606060"
+			 data-device="MuellTonnen"
+			 data-get="AlexKalendar_Bio-Restmuell_tage"
+			 data-off-color="lightgray"
 			 data-fhem-cmd="setreading myAbfall Restmuell_tage off"
 			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
 			 data-icons='["ro-bin warn","ro-bin warn","ro-bin warn blink","ro-bin warn"]'
-			 data-on-colors='["#808080","#808080","#808080","#808080"]'
+			 data-on-colors='["#ffffff","#ffffff","lightgray","lightgray"]'
 			 class="">
 		</div>
 		<div data-type="button"
 			 data-background-icon="none"
-			 data-device="myAbfall"
-			 data-get="Papier_tage"
+			 data-device="MuellTonnen"
+			 data-get="AlexKalendar_Bio-Restmuell_tage"
 			 data-off-color="cornflowerblue"
 			 data-fhem-cmd="setreading myAbfall Papier_tage off"
 			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
@@ -159,8 +159,8 @@
 		</div>
 		<div data-type="button"
 			 data-background-icon="none"
-			 data-device="myAbfall"
-			 data-get="Plastik_tage"
+			 data-device="MuellTonnen"
+			 data-get="AlexKalendar_GelberSack_tage"
 			 data-off-color="yellow"
 			 data-fhem-cmd="setreading myAbfall Plastik_tage off"
 			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
@@ -180,7 +180,7 @@
 			 data-get="state"
 			 data-on-color="black"
 			 data-off-color="#808080"
-			 data-on-background-color="cornflowerblue"
+			 data-on-background-color="orange"
 			 data-off-background-color="#3D4C66"
 			 data-icon="fa-bolt"
 			 class="">
@@ -359,22 +359,33 @@
 <li class="halbTransparent border-right" data-row="4" data-col="3" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">ECO-TASTER</header>
 	<div class="top-space">
-		<div data-type="link"
+		<div data-type="switch"
+			 data-device="WARM_Mod"
+			 data-get-on="on"		 
+			 data-set-on="on"
+			 data-set-off="off"
 			 data-width="50"
 			 data-height="50"
-			 data-color="black"
-			 data-background-color="green"
+			 data-on-color="black"
+			 data-off-color="#808080"
+			 data-on-background-color="orange"
+			 data-off-background-color="#3D4C66"
 			 data-icon="fa-home"
-			 data-fhem-cmd="setreading eco_taster onoff 1"
+			 
 			 class="round big cell inline">
 		</div>
-		<div data-type="link"
+		<div data-type="switch"
+			 data-device="ECO_Mod"
+			 data-get-on="on"		 
+			 data-set-on="on"
+			 data-set-off="off"
 			 data-width="50"
 			 data-height="50"
-			 data-color="black"
-			 data-background-color="cornflowerblue"
+			 data-on-color="black"
+			 data-off-color="#808080"
+			 data-on-background-color="cornflowerblue"
+			 data-off-background-color="#3D4C66"			 
 			 data-icon="ma-brightness_3"
-			 data-fhem-cmd="setreading eco_taster onoff 0"
 			 class="round big cell inline left-space">
 		</div>
 	</div>
@@ -383,18 +394,18 @@
 <li class="halbTransparent border-left border-right" data-row="5" data-col="1" data-sizex="2" data-sizey="2">
 	<header class="headerTransparent">ALEX</header>
 	<div data-type="homestatus"
-		 data-device='rr_Roman'
+		 data-device="Handy_Alex"
 		 data-set="state"
 		 data-get="state"
-		 data-get-on='["home","asleep","absent","gone"]'
-		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
+		 data-get-on='["present","asleep","absent","gone"]'
+		 data-alias='["Home","Bett","Weg","Urlaub"]'
 		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
 		 data-height="170"
 		 data-width="170"
 		 data-fgcolor="cornflowerblue"
-		 data-tkcolor="#3D4C66"
+		 data-tkcolor="orange"
 		 data-mincolor="black"
-		 data-maxcolor="#808080"
+		 data-maxcolor="lightgray"
 		 class="">
 	</div>
 </li>
@@ -402,18 +413,18 @@
 <li class="halbTransparent border-right" data-row="5" data-col="3" data-sizex="2" data-sizey="2">
 	<header class="headerTransparent">ALINA</header>
 	<div data-type="homestatus"
-		 data-device='rr_Sarah'
+		 data-device="Handy_Alina"
 		 data-set="state"
 		 data-get="state"
-		 data-get-on='["home","asleep","absent","gone"]'
-		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
+		 data-get-on='["present","asleep","absent","gone"]'
+		 data-alias='["Home","Bett","Weg","Urlaub"]'
 		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
 		 data-height="170"
 		 data-width="170"
 		 data-fgcolor="cornflowerblue"
-		 data-tkcolor="#3D4C66"
+		 data-tkcolor="orange"
 		 data-mincolor="black"
-		 data-maxcolor="#808080"
+		 data-maxcolor="lightgray"
 		 class="">
 	</div>
 </li>

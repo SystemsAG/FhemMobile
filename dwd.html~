@@ -15,8 +15,8 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="orange"
-		 data-off-color="lightgray"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="big cell">
@@ -29,8 +29,8 @@
 		 data-url="menu.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="orange"
-		 data-off-color="lightgray"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
 		 data-icon="fa-bars"
 		 class="big cell">
 	</div>
@@ -45,8 +45,8 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="orange"
-		 data-off-color="lightgray"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="big cell">
@@ -59,8 +59,8 @@
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="orange"
-		 data-off-color="lightgray"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
 		 data-icon="fa-cloud"
 		 class="big cell">
 	</div>

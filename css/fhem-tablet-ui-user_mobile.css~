@@ -1,5 +1,5 @@
 body {
-	background:#000000 url(../images/bg2_mobile.jpg) 0 0 no-repeat;
+	background:#000000 url(../images/blue_water.jpeg) 0 0 no-repeat;
 	color: #cccccc !important;
 }
 
@@ -13,7 +13,7 @@ hr {
         /* Fallback for web browsers that doesn't support RGBa */
     /*background: rgb(0, 0, 0) !important;*/
     /* RGBa with 0.6 opacity */
-    background: rgba(0, 0, 0, 0.7) !important;
+    background: rgba(0, 0, 0, 0.4) !important;
 }
 
 .Transparent {
@@ -27,8 +27,8 @@ hr {
         /* Fallback for web browsers that doesn't support RGBa */
     background: rgb(0, 0, 0) !important;
     /* RGBa with 0.6 opacity */
-    background: rgba(0, 0, 0, 0.5) !important;
-	border-top: 1px solid rgba(96,96,96,0.5) !important;
+    background: rgba(0, 0, 128, 0.2) !important;
+	border-top: 1px solid rgba(96,96,96,0.4) !important;
 }
 
 .dialogTransparent {
@@ -141,4 +141,3 @@ i#warn-back {
 	background-color:#aa6900 !important;
 }
 
-.little 		 { font-size: 20%;  }

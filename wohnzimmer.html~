@@ -7,6 +7,9 @@
 
 <div class="gridster">
 <ul>
+
+<!-- ----------------------------------------------------------------------Hear starts the HEADER------------------------------------------------------ -->
+
 <li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">HOME</header>
 	<div data-type="pagetab"
@@ -15,8 +18,8 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="big cell">
@@ -29,8 +32,8 @@
 		 data-url="menu.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bars"
 		 class="big cell">
 	</div>
@@ -45,8 +48,8 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="big cell">
@@ -59,12 +62,14 @@
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-cloud"
 		 class="big cell">
 	</div>
 </li>
+
+<!-- ----------------------------------------------------------------------Hear ends the HEADER------------------------------------------------------ -->
 
 <li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">TEMP / LICHT</header>
@@ -72,21 +77,23 @@
 		<div data-type="label"
 			 data-device="wz_Sensor"
 			 data-get="temperature"
-			 
-			 data-limits='[-70,25,25]'
-			 data-colors='["cornflowerblue","green","firebrick"]'
+			 data-part="1"
+			 data-unit="%B0C%0A"
+			 data-limits='[-70,22,25]'
+			 data-colors='["blue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<div data-type="label"
 			 data-device="wz_Sensor"
 			 data-get="luminance"
-			 
-			 data-limits='[0,40,61]'
-			 data-colors='["cornflowerblue","green","firebrick"]'
+			 data-part="1"
+			 data-unit="lux"
+			 data-limits='[0,350,450]'
+			 data-colors='["blue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<hr width="85%" class="">
-		<div class="big narrow orange">Wohnzimmer
+		<div class="big narrow orange_hell">Wohnzimmer
 		</div>
 	</div>
 </li>
@@ -98,8 +105,8 @@
 			 data-url="wohnzimmer_licht.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
+			 data-on-color="orange"
+			 data-off-color="lightgray"
 			 data-icon="fa-lightbulb-o"
 			 class="inline">
 		</div>
@@ -107,8 +114,8 @@
 			 data-url="wohnzimmer_multimedia.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
+			 data-on-color="orange"
+			 data-off-color="lightgray"
 			 data-icon="fa-sliders"
 			 class="inline">
 		</div>
@@ -130,7 +137,7 @@
 				 data-icon="ma-brightness_3"
 				 data-background-icon="fa-circle-thin"
 				 data-on-color="cornflowerblue"
-				 data-off-color="#808080"
+				 data-off-color="lightgray"
 				 data-on-background-color="#aa6900"
 				 data-off-background-color="#3D4C66"
 				 class="">
@@ -169,8 +176,8 @@
 				 data-set-off=""
 				 data-icon="ro-sun"
 				 data-background-icon="fa-circle-thin"
-				 data-on-color="green"
-				 data-off-color="#808080"
+				 data-on-color="orange"
+			 	 data-off-color="lightgray"
 				 data-on-background-color="#aa6900"
 				 data-off-background-color="#3D4C66"
 				 class="">
@@ -185,13 +192,12 @@
 	<header class="headerTransparent">SAMSUNG TV</header>
 	<div data-type="switch"
 		 data-device="SamsungTv"
-		 data-get-on="POWERON"		 
-		 data-set-on="POWERON"
+		 data-get-on="opened"		 
 		 data-set-off="POWEROFF"
 		 data-on-color="black"
-		 data-off-color="#808080"
-		 data-on-background-color="cornflowerblue"
-		 data-off-background-color="#3D4C66"
+		 data-off-color="lightgray"
+		 data-on-background-color="orange"
+		 data-off-background-color="grey"
 		 data-icon="ro-tv2"
 		 class="cell">
 	</div>
@@ -205,13 +211,17 @@
         		 data-device="SamsungTv" 
              data-icon="ro-volume-decrease" 
              data-background-icon="fa-square-o" 
-             data-set-on="VOLDOWN">
+             data-set-on="VOLDOWN"
+             data-off-color="lightgray"
+             data-off-background-color="black">
         </div>
          <div data-type="push" 
         		 data-device="SamsungTv" 
              data-icon="ro-volume-increase" 
              data-background-icon="fa-square-o" 
-             data-set-on="VOLUP">
+             data-set-on="VOLUP"
+             data-off-color="lightgray"
+             data-off-background-color="black">
         </div>
     </div>
 
@@ -225,9 +235,9 @@
 		 data-set-on="HDMI"
 		 data-set-off="TV"
 		 data-on-color="black"
-		 data-off-color="#808080"
-		 data-on-background-color="cornflowerblue"
-		 data-off-background-color="#3D4C66"
+		 data-off-color="lightgray"
+		 data-on-background-color="orange"
+		 data-off-background-color="grey"
 		 data-icon="fs-rc_HDMI"
 		 class="cell">
 	</div>
@@ -240,11 +250,15 @@
     <div class="doublebox-v inline small">
         <div data-type="push" data-device="SamsungTv"
              data-icon="fa-chevron-up" data-background-icon="fa-square-o"
-             data-set-on="CHUP">
+             data-set-on="CHUP"
+             data-off-color="lightgray"
+             data-off-background-color="black">
         </div>
         <div data-type="push" data-device="SamsungTv"
                 data-icon="fa-chevron-down" data-background-icon="fa-square-o"
-                data-set-on="CHDOWN">
+                data-set-on="CHDOWN"
+                data-off-color="lightgray"
+                data-off-background-color="black">
         </div>
     </div>
    

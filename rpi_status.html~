@@ -7,6 +7,10 @@
 
 <div class="gridster">
 <ul>
+
+
+<!-- ----------------------------------------------------------------------Hear starts the HEADER------------------------------------------------------ -->
+
 <li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">HOME</header>
 	<div data-type="pagetab"
@@ -15,8 +19,8 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="big cell">
@@ -29,8 +33,8 @@
 		 data-url="menu.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bars"
 		 class="big cell">
 	</div>
@@ -45,8 +49,8 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="big cell">
@@ -59,13 +63,14 @@
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-cloud"
 		 class="big cell">
 	</div>
 </li>
 
+<!-- ----------------------------------------------------------------------Hear ends the HEADER------------------------------------------------------ -->
 <li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">TEMP / LAST</header>
 	<div class="top-space-mobile">
@@ -90,7 +95,7 @@
 		</div>
 	</div>
 	<hr width="85%" class="">
-	<div class="big narrow orange">RPi-Status
+	<div class="big narrow orange_hell">RPi-Status
 	</div>
 </li>
 
@@ -100,7 +105,7 @@
 		<div data-type="popup" data-height="170px" data-width="170px" class="inline">
 			<div data-type="push"
 				 data-background-icon=""
-				 data-off-color="#808080"
+				 data-off-color="lightgrey"
 				 data-icon="fa-refresh">
 			</div>
 			<div class="dialog dialogTransparent">
@@ -130,9 +135,9 @@
 		<div data-type="push"
 			 data-background-icon="none"
 			 data-icon="fs-system_fhem"
-			 data-url="http://192.168.1.5:8083/fhem"
+			 data-url="http://192.168.178.60:8083/fhem"
 			 data-on-color="#808080"
-			 data-off-color="#808080"
+			 data-off-color="lightgrey"
 			 class="inline">
 		</div>
 	</div>

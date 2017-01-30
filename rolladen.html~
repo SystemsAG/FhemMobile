@@ -7,6 +7,10 @@
 
 <div class="gridster">
 <ul>
+
+
+<!-- ----------------------------------------------------------------------Hear starts the HEADER------------------------------------------------------ -->
+
 <li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">HOME</header>
 	<div data-type="pagetab"
@@ -15,8 +19,8 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="big cell">
@@ -29,8 +33,8 @@
 		 data-url="menu.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bars"
 		 class="big cell">
 	</div>
@@ -45,8 +49,8 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="big cell">
@@ -59,12 +63,14 @@
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-cloud"
 		 class="big cell">
 	</div>
 </li>
+
+<!-- ----------------------------------------------------------------------Hear ends the HEADER------------------------------------------------------ -->
 
 <li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">TEMP / LICHT</header>
@@ -75,7 +81,7 @@
 			 data-part="1"
 			 data-unit="%B0C%0A"
 			 data-limits='[-70,18,25]'
-			 data-colors='["cornflowerblue","green","firebrick"]'
+			 data-colors='["blue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<div data-type="label"
@@ -83,11 +89,11 @@
 			 data-get="luminance"
 			 
 			 data-limits='[0,40,61]'
-			 data-colors='["cornflowerblue","green","firebrick"]'
+			 data-colors='["blue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<hr width="85%" class="">
-		<div class="big narrow orange">Rolladen
+		<div class="big narrow orange_hell">Rolladen
 		</div>
 	</div>
 </li>
@@ -98,9 +104,10 @@
 		<div data-type="pagetab"
 			 data-url="wohnzimmer_licht.html"
 			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
+			 data-on-background-color="orange"
+			 
+			 data-on-color="black"
+			 data-off-color="lightgrey"
 			 data-icon="fa-lightbulb-o"
 			 class="inline">
 		</div>
@@ -130,20 +137,43 @@
 							data-colors='["yellow","yellow","green","green","green","#505050","#505050","#505050","#505050","#505050","#505050","#505050","#505050","orange","orange"]'							
 						></div></li>
 					<li><div data-type="switch" 
-								data-device="sw_rollladenAutomatik"
+								data-set-on="addstruct RolladenAutomatik wz_lRolladen"
+								data-set-off="delstruct RolladenAutomatik wz_lRolladen"
 								data-icon="oa-fts_shutter_automatic"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_lRolladen" 
+								data-set="dim"
+								data-set-on="80" 
+								data-icon="">80</div></li>	
 					<li><div data-type="push" 
 								data-device="wz_lRolladen" 
 								data-set-on="off" 
 								data-icon="fa-angle-down"></div></li>
 					<li><div data-type="push" 
 								data-device="wz_lRolladen" 
+								data-set="dim"
+								data-set-on="60" 
+								data-icon="">60</div></li>	
+					<li><div data-type="push" 
+								data-device="wz_rRolladen" 
 								data-set-on="stop" 
-								data-icon="oa-audio_stop"></div></li>
+								data-icon="fa-stop-circle"
+								data-off-background-color="red"
+								data-off-color="red"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_lRolladen" 
+								data-set="dim"
+								data-set-on="40" 
+								data-icon="">40</div></li>	
 					<li><div data-type="push" 
 								data-device="wz_lRolladen" 
 								data-set-on="on"
 								data-icon="fa-angle-up"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_lRolladen" 
+								data-set="dim"
+								data-set-on="20" 
+								data-icon="">20</div></li>	
 					
 				</ul>
 			</div>
@@ -170,16 +200,38 @@
 								data-icon="oa-fts_shutter_automatic"></div></li>
 					<li><div data-type="push" 
 								data-device="wz_mRolladen" 
+								data-set="dim"
+								data-set-on="20" 
+								data-icon="">20</div></li>	
+					<li><div data-type="push" 
+								data-device="wz_mRolladen" 
 								data-set-on="on" 
 								data-icon="fa-angle-down"></div></li>
 					<li><div data-type="push" 
 								data-device="wz_mRolladen" 
+								data-set="dim"
+								data-set-on="40" 
+								data-icon="">40</div></li>
+					<li><div data-type="push" 
+								data-device="wz_mRolladen" 
 								data-set-on="stop" 
-								data-icon="oa-audio_stop"></div></li>
+								data-icon="fa-stop-circle"
+								data-off-background-color="red"
+								data-off-color="red"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_mRolladen" 
+								data-set="dim"
+								data-set-on="60" 
+								data-icon="">60</div></li>
 					<li><div data-type="push" 
 								data-device="wz_mRolladen" 
 								data-set-on="off"
 								data-icon="fa-angle-up"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_mRolladen" 
+								data-set="dim"
+								data-set-on="80" 
+								data-icon="">80</div></li>
 				</ul>
 			</div>	
 		<div data-type="label" data-device="wz_mRolladen" data-get="statePosition" data-unit="%" data-limits='[-70,50,99]' data-colors='["cornflowerblue","green","firebrick"]' class="big top-narrow-5">
@@ -204,16 +256,38 @@
 								data-icon="oa-fts_shutter_automatic"></div></li>
 					<li><div data-type="push" 
 								data-device="wz_rRolladen" 
-								data-set-on="off" 
+								data-set="dim"
+								data-set-on="20" 
+								data-icon="">20</div></li>					
+					<li><div data-type="push" 
+								data-device="wz_rRolladen" 
+								data-set-on="on" 
 								data-icon="fa-angle-down"></div></li>
 					<li><div data-type="push" 
 								data-device="wz_rRolladen" 
-								data-set-on="stop" 
-								data-icon="oa-audio_stop"></div></li>
+								data-set="dim"
+								data-set-on="40" 
+								data-icon="">40</div></li>	
 					<li><div data-type="push" 
 								data-device="wz_rRolladen" 
-								data-set-on="on"
+								data-set-on="stop" 
+								data-icon="fa-stop-circle"
+								data-off-background-color="red"
+								data-off-color="red"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_rRolladen" 
+								data-set="dim"
+								data-set-on="60" 
+								data-icon="">60</div></li>	
+					<li><div data-type="push" 
+								data-device="wz_rRolladen" 
+								data-set-on="off"
 								data-icon="fa-angle-up"></div></li>
+					<li><div data-type="push" 
+								data-device="wz_rRolladen" 
+								data-set="dim"
+								data-set-on="80" 
+								data-icon="">80</div></li>	
 				</ul>				
 			</div>
 			<div data-type="label" data-device="wz_rRolladen" data-get="statePosition" data-unit="%" data-limits='[-70,50,99]' data-colors='["cornflowerblue","green","firebrick"]' class="big cell"></div>
@@ -238,16 +312,38 @@
 								data-icon="oa-fts_shutter_automatic"></div></li>
 					<li><div data-type="push" 
 								data-device="sz_lRolladen" 
+								data-set="dim"
+								data-set-on="20" 
+								data-icon="">20</div></li>	
+					<li><div data-type="push" 
+								data-device="sz_lRolladen" 
 								data-set-on="on" 
 								data-icon="fa-angle-down"></div></li>
 					<li><div data-type="push" 
 								data-device="sz_lRolladen" 
+								data-set="dim"
+								data-set-on="40" 
+								data-icon="">40</div></li>	
+					<li><div data-type="push" 
+								data-device="sz_lRolladen" 
 								data-set-on="stop" 
-								data-icon="oa-audio_stop"></div></li>
+								data-icon="fa-stop-circle"
+								data-off-background-color="red"
+								data-off-color="red"></div></li>
+					<li><div data-type="push" 
+								data-device="sz_lRolladen" 
+								data-set="dim"
+								data-set-on="60" 
+								data-icon="">60</div></li>	
 					<li><div data-type="push" 
 								data-device="sz_lRolladen" 
 								data-set-on="off"
 								data-icon="fa-angle-up"></div></li>
+					<li><div data-type="push" 
+								data-device="sz_lRolladen" 
+								data-set="dim"
+								data-set-on="80" 
+								data-icon="">80</div></li>	
 					
 				</ul>
 			</div>
@@ -279,16 +375,38 @@
 								data-icon="oa-fts_shutter_automatic"></div></li>
 					<li><div data-type="push" 
 								data-device="sz_rRolladen" 
+								data-set="dim"
+								data-set-on="20" 
+								data-icon="">20</div></li>	
+					<li><div data-type="push" 
+								data-device="sz_rRolladen" 
 								data-set-on="on" 
 								data-icon="fa-angle-down"></div></li>
 					<li><div data-type="push" 
 								data-device="sz_rRolladen" 
+								data-set="dim"
+								data-set-on="40" 
+								data-icon="">40</div></li>	
+					<li><div data-type="push" 
+								data-device="sz_lRolladen" 
 								data-set-on="stop" 
-								data-icon="oa-audio_stop"></div></li>
+								data-icon="fa-stop-circle"
+								data-off-background-color="red"
+								data-off-color="red"></div></li>
+					<li><div data-type="push" 
+								data-device="sz_rRolladen" 
+								data-set="dim"
+								data-set-on="60" 
+								data-icon="">60</div></li>	
 					<li><div data-type="push" 
 								data-device="sz_rRolladen" 
 								data-set-on="off"
 								data-icon="fa-angle-up"></div></li>
+					<li><div data-type="push" 
+								data-device="sz_rRolladen" 
+								data-set="dim"
+								data-set-on="80" 
+								data-icon="">80</div></li>	
 				</ul>				
 			</div>
 			<div data-type="label" data-device="sz_rRolladen" data-get="statePosition" data-unit="%" data-limits='[-70,50,99]' data-colors='["cornflowerblue","green","firebrick"]' class="big cell"></div>

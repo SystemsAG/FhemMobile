@@ -7,6 +7,9 @@
 
 <div class="gridster">
 <ul>
+
+<!-- ----------------------------------------------------------------------Hear starts the HEADER------------------------------------------------------ -->
+
 <li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">HOME</header>
 	<div data-type="pagetab"
@@ -15,8 +18,8 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="big cell">
@@ -29,8 +32,8 @@
 		 data-url="menu.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bars"
 		 class="big cell">
 	</div>
@@ -45,8 +48,8 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="big cell">
@@ -59,12 +62,14 @@
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-cloud"
 		 class="big cell">
 	</div>
 </li>
+
+<!-- ----------------------------------------------------------------------Hear ends the HEADER------------------------------------------------------ -->
 
 <li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">TEMP / LICHT</header>
@@ -72,21 +77,23 @@
 		<div data-type="label"
 			 data-device="wz_Sensor"
 			 data-get="temperature"
-			 
-			 data-limits='[-70,25,25]'
-			 data-colors='["cornflowerblue","green","firebrick"]'
+			 data-part="1"
+			 data-unit="%B0C%0A"
+			 data-limits='[-70,20,25]'
+			 data-colors='["blue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<div data-type="label"
 			 data-device="wz_Sensor"
 			 data-get="luminance"
-			 
-			 data-limits='[0,40,61]'
-			 data-colors='["cornflowerblue","green","firebrick"]'
+			 data-part="1"
+			 data-unit="lux"
+			 data-limits='[0,350,450]'
+			 data-colors='["blue","green","firebrick"]'
 			 class="big inline">
 		</div>
 		<hr width="85%" class="">
-		<div class="big narrow orange">Wohnzimmer
+		<div class="big narrow orange_hell">Wohnzimmer
 		</div>
 	</div>
 </li>
@@ -98,198 +105,128 @@
 			 data-url="wohnzimmer.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
+			 data-on-color="orange"
+			 data-off-color="lightgrey"
 			 data-icon="ro-sofa"
 			 class="inline">
 		</div>
 		<div data-type="pagetab"
 			 data-url="wohnzimmer_multimedia.html"
 			 data-background-icon="fa-circle-thin"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
+			 data-on-color="orange"
+			 data-off-color="lightgrey"
 			 data-icon="fa-sliders"
 			 class="inline">
 		</div>
 	</div>
 </li>
 
-<li class="halbTransparent" data-row="3" data-col="1" data-sizex="4" data-sizey="1">
-
-</li>
-
-<li class="halbTransparent border-left border-right" data-row="4" data-col="1" data-sizex="4" data-sizey="3">
+<li class="halbTransparent border-left border-right" data-row="3" data-col="1" data-sizex="4" data-sizey="4">
+	<header class="headerTransparent">LICHT IM WOHNZIMMER</header>
 	<div data-type="swiper" data-height="100%" data-width="100%" class="navbuttons nopagination noswipe">
 		<ul>
 			<li class="Transparent">
-				<div class="inline top-space-mobile verticalLine">
+				<div class="inline">
 					<div class="right-space">
 						<div class="large">Deckenlampe
 						</div>
-						<div class="inline top-space-mobile">
+						<div class="cell top-space-mobile">
 							<div data-type="switch"
 								 data-device="wz_Hauptlicht"
 								 data-get-on="on.*"
 								 data-set-on="on"
 								 data-on-color="black"
-								 data-off-color="#808080"
-								 data-on-background-color="cornflowerblue"
-								 data-off-background-color="#3D4C66"
+								 data-off-color="lightgrey"
+								 data-on-background-color="orange"
+								 data-off-background-color="grey"
 								 data-icon="oa-light_pendant_light_round"
 								 class="">
 							</div>
 							<div class="">An/Aus
 							</div>
 						</div>
-						<div class="inline top-space-mobile">
-							<div data-type="push"
-								 data-device="wz_ilight_decke"
-								 data-set="rgb"
-								 data-set-on="FFFFFF"
-								 data-off-color="#808080"
-								 data-off-background-color="#3D4C66"
-								 data-icon="fa-paint-brush"
-								 class="">
-							</div>
-							<div class="">Weiß
-							</div>
-						</div>
-						<div class="top-space">
-							<div data-type="volume"
-								 data-device="wz_ilight_decke"
-								 data-get="hue"
-								 data-set="hue"
-								 data-min="0"
-								 data-max="360"
-								 data-unit="°"
-								 data-tickstep="10"
-								 class="small hue-tick">
-							</div>
-						</div>
-						<div class="">
-							<div data-type="volume"
-								 data-device="wz_ilight_decke"
-								 data-get="brightness"
-								 data-set="brightness"
-								 data-min="0"
-								 data-max="100"
-								 data-unit="%"
-								 data-tickstep="10"
-								 class="small dim-tick">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="inline top-space-mobile">
-					<div class="left-space">
-						<div class="large">Wand
-						</div>
-						<div class="inline top-space-mobile">
-							<div data-type="switch"
-								 data-device="wz_rgbWand"
-								 data-get-on="on.*"
-								 data-set-on="on"
-								 data-on-color="black"
-								 data-off-color="#808080"
-								 data-on-background-color="cornflowerblue"
-								 data-off-background-color="#3D4C66"
-								 data-icon="oa-light_pendant_light_round"
-								 class="">
-							</div>
-							<div class="">An/Aus
-							</div>
-						</div>
-						<div class="inline top-space-mobile">
-							<div data-type="push"
-								 data-device="wz_rgbWand"
-								 data-set="rgb"
-								 data-set-on="FFFFFF"
-								 data-off-color="#808080"
-								 data-off-background-color="#3D4C66"
-								 data-icon="fa-paint-brush"
-								 class="">
-							</div>
-							<div class="">Weiß
-							</div>
-						</div>
-						<div class="top-space">
-							<div data-type="volume"
-								 data-device="wz_rgbWand"
-								 data-get="rgb"
-								 data-set="rgb"
-								 data-set-value="$v,100,100"
-								 data-min="0"
-								 data-max="360"
-								 data-unit="°"
-								 data-tickstep="10"
-								 class="small hue-tick">
-							</div>
-						</div>
-						<div class="">
-							<div data-type="volume"
-								 data-device="wz_rgbWand"
-								 data-get="brightness"
-								 data-set="dim"
-								 data-min="0"
-								 data-max="100"
-								 data-unit="%"
-								 data-tickstep="10"
-								 class="small dim-tick">
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="Transparent">
-				<div class="inline top-space-mobile verticalLine">
-					<div class="right-space">
-						<div class="large">Tischlampe
-						</div>
+						<div class="large">Tischlampe</div>
 						<div class="inline top-space-mobile">
 							<div data-type="switch"
 								 data-device="wz_Nebenlicht"
 								 data-get-on="on.*"
 								 data-set-on="on"
 								 data-on-color="black"
-								 data-off-color="#808080"
-								 data-on-background-color="cornflowerblue"
-								 data-off-background-color="#3D4C66"
-								 data-icon="oa-light_pendant_light_round"
+								 data-off-color="lightgrey"
+								 data-on-background-color="orange"
+								 data-off-background-color="grey"
+								 data-icon="oa-light_office_desk"
 								 class="">
 							</div>
 							<div class="">An/Aus
 							</div>
+						</div>												
+					</div>
+				</div>				
+			</li>
+			<li class="Transparent">						
+					<div class="inline top-space-mobile verticalLine">
+					<div class="left-space">
+						<div class="large">Wand
 						</div>
+					<div>
 						<div class="inline top-space-mobile">
 							<div data-type="push"
-								 data-device="wz_ilight_stehlampe"
+								 data-device="wz_rgbWand"
 								 data-set="rgb"
 								 data-set-on="FFFFFF"
-								 data-off-color="#808080"
-								 data-off-background-color="#3D4C66"
+								 data-off-color="lightgrey"
+								 data-off-background-color="grey"
 								 data-icon="fa-paint-brush"
 								 class="">
 							</div>
 							<div class="">Weiß
 							</div>
 						</div>
-						<div class="top-space">
-							<div data-type="volume"
-								 data-device="wz_ilight_stehlampe"
-								 data-get="hue"
-								 data-set="HSV"
-								 data-set-value="$v,100,100"
-								 data-min="0"
-								 data-max="360"
-								 data-unit="°"
-								 data-tickstep="10"
-								 class="small hue-tick">
+						<div class="inline top-space-mobile">
+							<div data-type="push"
+								 data-device="wz_rgbWand"
+								 data-set="rgb"
+								 data-set-on="FF4F2B"
+								 data-off-color="#FF4F2B"
+								 data-off-background-color="grey"
+								 data-icon="fa-paint-brush"
+								 class="">
+							</div>
+							<div class="">ROT
+							</div>
+						</div>
+					</div>
+						<div class="inline top-space-mobile">
+							<div data-type="push"
+								 data-device="wz_rgbWand"
+								 data-set="rgb"
+								 data-set-on="12FF51"
+								 data-off-color="#12FF51"
+								 data-off-background-color="grey"
+								 data-icon="fa-paint-brush"
+								 class="">
+							</div>
+							<div class="">GRÜN
+							</div>
+						</div>
+						<div class="inline top-space-mobile">
+							<div data-type="push"
+								 data-device="wz_rgbWand"
+								 data-set="rgb"
+								 data-set-on="3300FF"
+								 data-off-color="#3300FF"
+								 data-off-background-color="grey"
+								 data-icon="fa-paint-brush"
+								 class="">
+							</div>
+							<div class="">BLAU
 							</div>
 						</div>
 						<div class="">
 							<div data-type="volume"
-								 data-device="wz_ilight_stehlampe"
-								 data-get="brightness"
+								 data-device="wz_rgbWand"
+								 data-get="dim"
 								 data-set="dim"
 								 data-min="0"
 								 data-max="100"
@@ -298,8 +235,23 @@
 								 class="small dim-tick">
 							</div>
 						</div>
+						<div class="top-space-mobile">
+							<div data-type="switch"
+								 data-device="wz_rgbWand"
+								 data-get-on="on.*"
+								 data-set-on="on"
+								 data-on-color="black"
+								 data-off-color="lightgrey"
+								 data-on-background-color="orange"
+								 data-off-background-color="grey"
+								 data-icon="oa-light_led_stripe_rgb"
+								 class="">
+							</div>
+							<div class="">An/Aus
+							</div>
+						</div>
 					</div>
-				</div>
+				</div>							
 				<div class="inline top-space-mobile">
 					<div class="left-space">
 						<div class="large">Glasböden
