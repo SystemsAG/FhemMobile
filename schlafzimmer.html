@@ -77,7 +77,7 @@
 	<header class="headerTransparent">TEMP / LICHT</header>
 	<div class="top-space-mobile">
 		<div data-type="label"
-			 data-device="wz_Sensor"
+			 data-device="sz_Sensor"
 			 data-get="temperature"
 			 data-part="1"
 			 data-unit="%B0C%0A"
@@ -86,7 +86,7 @@
 			 class="big inline">
 		</div>
 		<div data-type="label"
-			 data-device="wz_Sensor"
+			 data-device="sz_Sensor"
 			 data-get="luminance"
 			 data-part="1"
 			 data-unit="lux"
@@ -218,6 +218,16 @@
 			</div>
 			<div class="narrow">Heizung
 			</div>
+			</div>
+		<div class="inline">
+			<div data-type="symbol" data-device="sz_Sensor" data-get="battery"
+		     data-icons='["oa-measure_battery_100","oa-measure_battery_75","oa-measure_battery_50","oa-measure_battery_25","oa-measure_battery_0"]'
+		      data-get-on='["[0-9]{3}\\ %","[789][0-9]\\ %","[456][0-9]\\ %","[123][0-9]\\ %","[0-9]\\ %"]'
+		     data-on-colors='["green","#3ADF00","orange","#FE642E","red"]'>
+			</div>
+			<div class="narrow">Sensor
+			</div>
+		</div>		
 		</div>	
 	</div>
 </li>

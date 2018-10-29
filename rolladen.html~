@@ -114,9 +114,9 @@
 		<div data-type="pagetab"
 			 data-url="wohnzimmer_multimedia.html"
 			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
+			 data-on-background-color="orange"
+			 data-on-color="black"
+			 data-off-color="lightgrey"
 			 data-icon="fa-sliders"
 			 class="inline">
 		</div>

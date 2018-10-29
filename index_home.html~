@@ -394,11 +394,11 @@
 <li class="halbTransparent border-left border-right" data-row="5" data-col="1" data-sizex="2" data-sizey="2">
 	<header class="headerTransparent">ALEX</header>
 	<div data-type="homestatus"
-		 data-device="Handy_Alex"
-		 data-set="state"
-		 data-get="state"
-		 data-get-on='["present","asleep","absent","gone"]'
-		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
+		 data-device="Anwesenheits_dummy"
+		 data-set="Anwesenheit_Alex"
+		 data-get="Anwesenheit_Alex"
+		 data-get-on='["anwesend","asleep","abwesend","urlaub"]'
+		 data-alias='["Home","Bett","Weg","Urlaub"]'
 		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
 		 data-height="170"
 		 data-width="170"
@@ -417,7 +417,7 @@
 		 data-set="state"
 		 data-get="state"
 		 data-get-on='["present","asleep","absent","gone"]'
-		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
+		 data-alias='["Home","Bett","Weg","Urlaub"]'
 		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
 		 data-height="170"
 		 data-width="170"

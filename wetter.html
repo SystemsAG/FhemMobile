@@ -7,6 +7,9 @@
 
 <div class="gridster">
 <ul>
+
+<!-- ----------------------------------------------------------------------Hear starts the HEADER------------------------------------------------------ -->
+
 <li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">HOME</header>
 	<div data-type="pagetab"
@@ -15,8 +18,8 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="big cell">
@@ -29,8 +32,8 @@
 		 data-url="menu.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bars"
 		 class="big cell">
 	</div>
@@ -45,8 +48,8 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="big cell">
@@ -59,12 +62,15 @@
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="orange"
+		 data-off-color="lightgray"
 		 data-icon="fa-cloud"
 		 class="big cell">
 	</div>
 </li>
+
+<!-- ----------------------------------------------------------------------Hear ends the HEADER------------------------------------------------------ -->
+
 
 <li class="halbTransparent border-left" data-row="2" data-col="1" data-sizex="2" data-sizey="1" style="overflow:auto;">
 	<header class="headerTransparent">INNENTEMPERATUR</header>	
@@ -141,7 +147,7 @@
 		 data-size="80"
 		 data-tickstep="45"
 		 data-angleoffset="0"
-		 data-fgcolor="#808080"
+		 data-fgcolor="lightgrey"
 		 class="">
 	</div>
 </li>
@@ -151,7 +157,7 @@
 <li class="halbTransparent border-left border-right" data-row="3" data-col="1" data-sizex="4" data-sizey="2">
 	<header class="headerTransparent">WETTERDATEN FÜR NEU-ULM</header>
 	<div class="container weather">
-		<table width="90%" class="top-space">
+		<table width="90%" class="top-space-10">
 			<tr>
 				<td rowspan="5" style="text-align:center;vertical-align:top">
 					<div data-type="weather"
@@ -213,6 +219,20 @@
 						 data-device="NeuUlm_Wetter"
 						 data-get="temperature"
 						 data-unit="%B0C%0A"
+						 data-limits='[-73,18,28]' 
+						 data-colors='["cornflowerblue","green","firebrick"]'
+						 class="right big " >
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Richtung:
+				</td>
+				<td>
+					<div data-type="label"
+						 data-device="NeuUlm_Wetter"
+						 data-get="wind_condition"
+						 data-part="2"
 						 data-limits='[-73,18,28]' 
 						 data-colors='["cornflowerblue","green","firebrick"]'
 						 class="right big " >
