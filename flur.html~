@@ -195,9 +195,9 @@
 	<div data-type="switch"
 		 data-device="fl_Licht"
 		 data-on-color="black"
-		 data-off-color="#808080"
-		 data-on-background-color="cornflowerblue"
-		 data-off-background-color="#3D4C66"
+		 data-off-color="lightgrey"
+		 data-on-background-color="orange"
+		 data-off-background-color="grey"
 		 data-icon="fa-lightbulb-o"
 		 class="cell">
 	</div>
