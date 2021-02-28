@@ -91,7 +91,7 @@
 			</div>
 		</div>
 			<div data-type="label" 
-				 data-device="wz_Sensor"
+				 data-device="wz_Sensor_Licht"
 				 data-get="temperature"
 				 data-part="1"
 				 data-limits='[-73,18,28]' 
@@ -106,7 +106,7 @@
 		</div>
 		<div class="inline" style="width:28.5%;">
 			<div data-type="label" 
-				 data-device="bad_Sensor"
+				 data-device="allg_Flur_Sensor"
 				 data-get="humidity"
 				 data-part="1"
 				 data-limits='[0,40,71]' 
@@ -120,7 +120,7 @@
 		<div class="inline" style="width:28.5%;">
 			
 			<div data-type="label" 
-				 data-device="wz_Sensor"
+				 data-device="wz_Sensor_Licht"
 				 data-get="luminance"
 				 data-limits='[-73,100,300]' 
 				 data-part="1"
@@ -141,7 +141,7 @@
     <header class="headerTransparent">WINDRICHT.</header>
     <div data-type="wind_direction"
          data-device="NeuUlm_Wetter"
-         data-direction="windDIR"
+         data-direction="windDir"
          data-speed="wind"
          data-calm="~"
          data-size="80"
@@ -277,11 +277,11 @@
 					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc2_tempMin" data-unit="%B0C%0A" class="inline large"></div>
 				</div>
 				<div class="inline">
-				<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc2_weatherDay" data-substitution="s/^([a-zA-Z0-9- ]{1,16}).*/$1/" class="small thin"></div>
+				<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc2_weatherDay" data-substitution="s/^([a-zA-Z0-9- ]{1,16}).*/$1/" class=""></div>
 				<div data-type="weather" data-device="NeuUlm_Wetter" data-get="fc2_weatherDay" data-imageset="kleinklima" class="top-space" style="width:90px;"></div>
 				</div>
 				<div class="cell">
-					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc2_day_of_week"  class="inline large darker"></div>
+					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc2_date" data-substitution="toDate().ee()" class="large darker"></div>
 					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc2_date" class="inline large darker"></div>
 				</div>
 			</li>
@@ -296,7 +296,7 @@
 				<div data-type="weather" data-device="NeuUlm_Wetter" data-get="fc3_weatherDay" data-imageset="kleinklima" class="top-space" style="width:90px;"></div>
 				</div>
 				<div class="cell">
-					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc3_day_of_week"  class="inline large darker"></div>
+					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc3_date" data-substitution="toDate().ee()" class="large darker"></div>
 					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc3_date" class="inline large darker"></div>
 				</div>
 			</li>
@@ -311,7 +311,7 @@
 				<div data-type="weather" data-device="NeuUlm_Wetter" data-get="fc4_weatherDay" data-imageset="kleinklima" class="top-space" style="width:90px;"></div>
 				</div>
 				<div class="cell">
-					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc4_day_of_week"  class="inline large darker"></div>
+                    <div data-type="label" data-device="NeuUlm_Wetter" data-get="fc4_date" data-substitution="toDate().ee()" class="large darker"></div>
 					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc4_date" class="inline large darker"></div>
 				</div>
 			</li>
@@ -326,7 +326,7 @@
 				<div data-type="weather" data-device="NeuUlm_Wetter" data-get="fc5_weatherDay" data-imageset="kleinklima" class="top-space" style="width:90px;"></div>
 				</div>
 				<div class="cell">
-					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc5_day_of_week"  class="inline large darker"></div>
+                    <div data-type="label" data-device="NeuUlm_Wetter" data-get="fc5_date" data-substitution="toDate().ee()" class="large darker"></div>
 					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc5_date" class="inline large darker"></div>
 				</div>
 			</li>
@@ -341,7 +341,7 @@
 				<div data-type="weather" data-device="NeuUlm_Wetter" data-get="fc6_weatherDay" data-imageset="kleinklima" class="top-space" style="width:90px;"></div>
 				</div>
 				<div class="cell">
-					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc6_day_of_week"  class="inline large darker"></div>
+                    <div data-type="label" data-device="NeuUlm_Wetter" data-get="fc6_date" data-substitution="toDate().ee()" class="large darker"></div>
 					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc6_date" class="inline large darker"></div>
 				</div>
 			</li>
@@ -356,7 +356,7 @@
                     <div data-type="weather" data-device="NeuUlm_Wetter" data-get="fc7_weatherDay" data-imageset="kleinklima" class="top-space" style="width:90px;"></div>
                 </div>
 				<div class="cell">
-					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc7_day_of_week"  class="inline large darker"></div>
+                    <div data-type="label" data-device="NeuUlm_Wetter" data-get="fc7_date" data-substitution="toDate().ee()" class="large darker"></div>
 					<div data-type="label" data-device="NeuUlm_Wetter" data-get="fc7_date" class="inline large darker"></div>
 				</div>
 			</li>

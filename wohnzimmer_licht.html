@@ -173,8 +173,8 @@
 						<div class="inline top-space-mobile">
 							<div data-type="push"
 								 data-device="wz_rgbWand"
-								 data-set="rgb"
-								 data-set-on="FFFFFF"
+								 data-set="wcrgb"
+								 data-set-on="255 255 255 255 255"
 								 data-off-color="lightgrey"
 								 data-off-background-color="grey"
 								 data-icon="fa-paint-brush"
@@ -186,23 +186,23 @@
 						<div class="inline top-space-mobile">
 							<div data-type="push"
 								 data-device="wz_rgbWand"
-								 data-set="rgb"
-								 data-set-on="FF4F2B"
-								 data-off-color="#FF4F2B"
+								 data-set="wcrgb"
+								 data-set-on="10 0 252 147 3"
+								 data-off-color="#FC9303"
 								 data-off-background-color="grey"
 								 data-icon="fa-paint-brush"
 								 class="">
 							</div>
-							<div class="">ROT
+							<div class="">Orange
 							</div>
 						</div>
 					</div>
 						<div class="inline top-space-mobile">
 							<div data-type="push"
 								 data-device="wz_rgbWand"
-								 data-set="rgb"
-								 data-set-on="12FF51"
-								 data-off-color="#12FF51"
+								 data-set="wcrgb"
+								 data-set-on="10 0 29 255 161"
+								 data-off-color="#1dffa1"
 								 data-off-background-color="grey"
 								 data-icon="fa-paint-brush"
 								 class="">
@@ -213,9 +213,9 @@
 						<div class="inline top-space-mobile">
 							<div data-type="push"
 								 data-device="wz_rgbWand"
-								 data-set="rgb"
-								 data-set-on="3300FF"
-								 data-off-color="#3300FF"
+								 data-set="wcrgb"
+								 data-set-on="10 0 0 203 252"
+								 data-off-color="#00cbfc"
 								 data-off-background-color="grey"
 								 data-icon="fa-paint-brush"
 								 class="">
@@ -284,19 +284,10 @@
 							<div class="">Weiß
 							</div>
 						</div>
-						<div class="top-space">
-							<div data-type="volume"
-								 data-device="wz_ilight_glasboeden"
-								 data-get="hue"
-								 data-set="HSV"
-								 data-set-value="$v,100,100"
-								 data-min="0"
-								 data-max="360"
-								 data-unit="°"
-								 data-tickstep="10"
-								 class="small hue-tick">
-							</div>
-						</div>
+                        <div data-type="colorwheel"
+                             data-device="wz_rgbWand"
+                             data-get="rgb"
+                             data-set="rgb"></div>
 						<div class="">
 							<div data-type="volume"
 								 data-device="wz_ilight_glasboeden"
